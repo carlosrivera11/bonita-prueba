@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jasperTemplate PUBLIC "-//JasperReports//DTD Template//EN" "http://jasperreports.sourceforge.net/dtds/jaspertemplate.dtd">
+
+<jasperTemplate>
+	<style name="bonita_report_text"/>
+	<style name="bonita_report_text_bold"/>
+	<style name="bonita_report_title"/>
+	<style name="bonita_report_description"/>
+	<style name="bonita_report_section_title"/>
+	<style name="bonita_report_parameter_label"/>
+	<style name="bonita_report_table_header"/>
+	<style name="bonita_report_table_line"/>
+	<style name="bonita_report_hyperlink"/>
+	<style name="bonita_report_shape_line"/>
+	<style name="bonita_report_shape_button"/>
+</jasperTemplate>

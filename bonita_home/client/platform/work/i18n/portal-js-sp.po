@@ -1,0 +1,418 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "1 h."
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "1 min."
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "10 min."
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "30 min."
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "5 min."
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+#: main/features/admin/monitoring/monitoring.html
+msgid "Actions"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-menuCreator.html
+#: main/features/admin/applications/details/page-list-addPageModal.html
+#: main/features/admin/applications/details/page-list.html
+msgid "Add"
+msgstr ""
+
+#: main/features/admin/applications/details/page-list.html
+msgid "Add from custom pages"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-addCustomMenuModal.html
+msgid "Add menu"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-actionBar.html
+#: main/features/admin/applications/details/menubuilder-addCustomMenuModal.html
+msgid "Add menu item"
+msgstr ""
+
+#: main/features/admin/applications/details/page-list-addPageModal.html
+msgid "Add page"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-addCustomMenuModal.html
+msgid "Add pages in Navigation"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-menuCreator.html
+msgid "Add top-level menu"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "All"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+msgid "An application is a customized environment for a specific user profile, in which users interact with business data and business processes in the most efficient way."
+msgstr ""
+
+#: main/features/admin/applications/import-application.html
+msgid "Application XML file"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+msgid "Application list"
+msgstr ""
+
+#: main/features/admin/applications/import-application.html
+msgid "Before you import the application, the pages and the profile must already be loaded in the Portal."
+msgstr ""
+
+#: main/features/admin/applications/delete-application.html
+#: main/features/admin/applications/details/menubuilder-addCustomMenuModal.html
+#: main/features/admin/applications/details/page-list-addPageModal.html
+#: main/features/admin/applications/edit-application.html
+#: main/features/admin/applications/export-application.html
+#: main/features/admin/applications/import-application.html
+msgid "Cancel"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Case state"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Cases with failure"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Cases with failures"
+msgstr ""
+
+#: main/features/admin/applications/import-application.html
+msgid "Click here to choose your file. XML file (.xml)"
+msgstr ""
+
+#: main/features/admin/applications/import-application.html
+msgid "Close"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+msgid "Create an application"
+msgstr ""
+
+#: main/features/admin/applications/details/application-details.html
+msgid "Created by"
+msgstr ""
+
+#: main/features/admin/applications/details/application-details-app.html
+msgid "Creation"
+msgstr ""
+
+#: main/features/admin/applications/details/application-details.html
+msgid "Creation on"
+msgstr ""
+
+#: main/features/admin/processVisu/processVisu.html
+msgid "DEFAULT ZOOM LEVEL"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+#: main/features/admin/applications/delete-application.html
+#: main/features/admin/applications/details/menubuilder-actionBar.html
+msgid "Delete"
+msgstr ""
+
+#: main/features/admin/applications/delete-application.html
+msgid "Delete application"
+msgstr ""
+
+#: main/features/admin/applications/edit-application.html
+msgid "Description"
+msgstr ""
+
+#: main/features/admin/applications/edit-application.html
+msgid "Display name"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+#: main/features/admin/applications/details/application-details.html
+#: main/features/admin/applications/details/menubuilder-actionBar.html
+msgid "Edit"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-addCustomMenuModal.html
+msgid "Edit menu"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-addCustomMenuModal.html
+msgid "Edit menu item"
+msgstr ""
+
+#: main/features/admin/applications/import-application.html
+msgid "Error"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+#: main/features/admin/applications/export-application.html
+msgid "Export"
+msgstr ""
+
+#: main/features/admin/applications/export-application.html
+msgid "Export application"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Filters"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Healthy"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Healthy cases"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+#: main/features/admin/applications/import-application.html
+msgid "Import"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+#: main/features/admin/applications/import-application.html
+msgid "Import an application"
+msgstr ""
+
+#: main/features/admin/processVisu/processVisu.html
+msgid "MAX"
+msgstr ""
+
+#: main/features/admin/processVisu/processVisu.html
+msgid "MIN"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Monitor open cases"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-addCustomMenuModal.html
+msgid "Multi-page menu"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+#: main/features/admin/applications/details/menubuilder-addCustomMenuModal.html
+msgid "Name"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-menuCreator.html
+msgid "Navigation"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Never"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+msgid "New"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+msgid "No application available."
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-addCustomMenuModal.html
+msgid "One-page menu"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Open cases"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-addCustomMenuModal.html
+#: main/features/admin/applications/details/page-list-addPageModal.html
+msgid "Page"
+msgstr ""
+
+#: main/features/admin/applications/details/page-list.html
+msgid "Pages"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Process list"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Process name"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Process version"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+#: main/features/admin/applications/details/application-details.html
+#: main/features/admin/applications/edit-application.html
+msgid "Profile"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Refresh"
+msgstr ""
+
+#: main/features/admin/applications/details/page-list.html
+msgid "Remove"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-addCustomMenuModal.html
+msgid "Select the page"
+msgstr ""
+
+#: main/features/admin/applications/details/page-list.html
+msgid "Set as Home page"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Show"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+msgid "Sort by URL"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+msgid "Sort by name"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+msgid "Sort by updated on"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+msgid "Sort by version"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-menuCreator.html
+msgid "Specify the menu structure."
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "State"
+msgstr ""
+
+#: main/features/admin/applications/import-application.html
+msgid "Status of import"
+msgstr ""
+
+#: main/features/admin/applications/delete-application.html
+msgid "The application"
+msgstr ""
+
+#: main/common/factories/i18nMsg.js
+msgid "This URL is already in use"
+msgstr ""
+
+#: main/common/factories/i18nMsg.js
+msgid "This field is mandatory"
+msgstr ""
+
+#: main/common/factories/i18nMsg.js
+msgid "This name is already in use"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+msgid "To create an application, click New or Import."
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "Totals"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+#: main/features/admin/applications/details/application-details.html
+#: main/features/admin/applications/details/page-list-addPageModal.html
+#: main/features/admin/applications/edit-application.html
+#: main/features/admin/applications/import-application.html
+msgid "URL"
+msgstr ""
+
+#: main/features/admin/applications/details/application-details-app.html
+msgid "Update"
+msgstr ""
+
+#: main/features/admin/applications/details/application-details.html
+msgid "Updated by"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+#: main/features/admin/applications/details/application-details.html
+msgid "Updated on"
+msgstr ""
+
+#: main/features/admin/applications/applications-list.html
+#: main/features/admin/applications/edit-application.html
+#: main/features/admin/monitoring/monitoring.html
+msgid "Version"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "View case list"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "View diagram"
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "View process"
+msgstr ""
+
+#: main/features/admin/applications/export-application.html
+msgid "When you export an application, pages and profiles are not exported in the file."
+msgstr ""
+
+#: main/features/admin/monitoring/monitoring.html
+msgid "With failures"
+msgstr ""
+
+#: main/features/admin/applications/export-application.html
+msgid "You are about to export the application"
+msgstr ""
+
+#: main/features/admin/applications/details/menubuilder-menuCreator.html
+msgid "You must add a page before you can reference it in a menu."
+msgstr ""
+
+#: main/features/admin/applications/edit-application.html
+msgid "an Application"
+msgstr ""
+
+#: main/features/admin/applications/import-application.html
+msgid "application has been partially imported. The following items are not loaded in the Portal."
+msgstr ""
+
+#: main/features/admin/applications/import-application.html
+msgid "application has been successfully imported, with complete page mapping and menu mapping."
+msgstr ""
+
+#: main/features/admin/processVisu/processVisu.html
+msgid "back"
+msgstr ""
+
+#: main/features/admin/applications/delete-application.html
+msgid "will be permanently deleted."
+msgstr ""
+
+msgid "Counters include cases from root processes and cases started by call activities."
+msgstr ""

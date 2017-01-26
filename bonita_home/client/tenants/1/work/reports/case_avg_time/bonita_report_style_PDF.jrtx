@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jasperTemplate PUBLIC "-//JasperReports//DTD Template//EN" "http://jasperreports.sourceforge.net/dtds/jaspertemplate.dtd">
+
+<jasperTemplate>
+	<style name="bonita_report_text" forecolor="#6E6F6B" fontName="Signika"/>
+	<style name="bonita_report_text_bold" forecolor="#6E6F6B" fontName="Signika" isBold="true"/>
+	<style name="bonita_report_title" forecolor="#C85250" fontName="Signika" fontSize="24" isBold="true"/>
+	<style name="bonita_report_description" forecolor="#999999" fontName="Signika"/>
+	<style name="bonita_report_section_title" forecolor="#C95050" fontName="Signika" fontSize="20" isBold="true"/>
+	<style name="bonita_report_parameter_label" forecolor="#CC0000" fontName="Signika" fontSize="13" isBold="true"/>
+	<style name="bonita_report_table_header" mode="Opaque" forecolor="#363637" backcolor="#F7F7F7" vAlign="Middle" fontName="Signika" isBold="true">
+		<box leftPadding="3">
+			<pen lineColor="#D9D9D9"/>
+			<topPen lineWidth="1.0" lineColor="#D9D9D9"/>
+			<leftPen lineWidth="1.0" lineColor="#D9D9D9"/>
+			<bottomPen lineWidth="1.0" lineColor="#D9D9D9"/>
+			<rightPen lineWidth="1.0" lineColor="#D9D9D9"/>
+		</box>
+	</style>
+	<style name="bonita_report_table_line" forecolor="#6E6F6B" vAlign="Middle" fontName="Signika">
+		<box leftPadding="3">
+			<pen lineColor="#EDEDED"/>
+			<topPen lineWidth="1.0" lineColor="#EDEDED"/>
+			<leftPen lineWidth="1.0" lineColor="#EDEDED"/>
+			<bottomPen lineWidth="1.0" lineColor="#EDEDED"/>
+			<rightPen lineWidth="1.0" lineColor="#EDEDED"/>
+		</box>
+	</style>
+	<style name="bonita_report_hyperlink" forecolor="#5894BA" fontName="Signika"/>
+	<style name="bonita_report_shape_line">
+		<pen lineWidth="1.0" lineColor="#D4D4D4"/>
+	</style>
+	<style name="bonita_report_shape_button"/>
+</jasperTemplate>

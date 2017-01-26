@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="case_avg_time" language="groovy" pageWidth="1250" pageHeight="994" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="1210" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" scriptletClass="org.bonitasoft.report.scriptlet.AggragateScriptlet" resourceBundle="case_avg_time" uuid="bcc890e8-4d90-4dad-9b0a-5a032852bfb5">
+	<property name="ireport.zoom" value="2.139837529582513"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="163"/>
+	<property name="BONITA_HTML_ENGINE" value="true"/>
+	<property name="BONITA_FORM_1_ID" value="p_date"/>
+	<property name="BONITA_FORM_1_WIDGET" value="DATE_RANGE"/>
+	<property name="BONITA_FORM_1_LABEL" value="Period"/>
+	<property name="BONITA_FORM_2_ID" value="p_apps_id"/>
+	<property name="BONITA_FORM_2_WIDGET" value="SELECT"/>
+	<property name="BONITA_FORM_2_LABEL" value="Apps"/>
+	<property name="BONITA_FORM_2_HAS_ALL" value="TRUE"/>
+	<property name="BONITA_FORM_2_HAS_ALL_VALUE" value="-1"/>
+	<property name="BONITA_FORM_2_QUERY" value="SELECT PROCESSID AS id, NAME AS label  FROM process_definition WHERE TENANTID = $P{BONITA_TENANT_ID} ORDER BY label, id"/>
+	<import value="org.bonitasoft.report.chart.customizer.BonitaReportPeriodFormatter"/>
+	<import value="org.bonitasoft.report.chart.customizer.BonitaBarChartCustomizer"/>
+	<import value="org.joda.time.format.PeriodFormatterBuilder"/>
+	<import value="org.joda.time.Period"/>
+	<import value="org.bonitasoft.report.scriptlet.AggragateScriptlet"/>
+	<import value="org.joda.time.format.PeriodFormatter"/>
+	<template><![CDATA[$P{BONITA_REPORT_FOLDER} + "/bonita_report_style_"+ $P{BONITA_EXPORT_FORMAT}+ $P{BONITA_LOCALE_LANGUAGE}+ ".jrtx"]]></template>
+	<subDataset name="chartDs" uuid="878d4792-c258-402a-8096-8489dfbf6304">
+		<parameter name="BONITA_TENANT_ID" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="BONITA_LOGGED_USER_ID" class="java.lang.String"/>
+		<parameter name="BONITA_BASE_URL" class="java.lang.String"/>
+		<parameter name="BONITA_REPORT_FOLDER" class="java.lang.String"/>
+		<parameter name="BONITA_HTML_FORM" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="BONITA_HTML_MAX_REPORT_COUNT" class="java.lang.Integer" isForPrompting="false"/>
+		<parameter name="BONITA_EXPORT_FORMAT" class="java.lang.String">
+			<defaultValueExpression><![CDATA["HTML"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="BONITA_EXPORT_TO_PDF" class="java.lang.String"/>
+		<parameter name="BONITA_REPORT_URL" class="java.lang.String"/>
+		<parameter name="BONITA_TIME_ZONE" class="java.util.TimeZone" isForPrompting="false">
+			<defaultValueExpression><![CDATA[java.util.TimeZone.getDefault()]]></defaultValueExpression>
+		</parameter>
+		<parameter name="BONITA_LOCALE_DATE_FORMAT" class="java.lang.String"/>
+		<parameter name="BONITA_LOCALE_TIME_FORMAT" class="java.lang.String"/>
+		<parameter name="BONITA_LOCALE_DATETIME_FORMAT" class="java.lang.String"/>
+		<parameter name="p_date_from" class="java.util.Date">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="p_date_to" class="java.util.Date">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="p_state_name" class="java.lang.String">
+			<defaultValueExpression><![CDATA["%"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="p_apps_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="p_period_duration" class="java.lang.Long" isForPrompting="false">
+			<defaultValueExpression><![CDATA[(
+    (org.joda.time.Hours.hoursBetween(new org.joda.time.DateTime($P{p_date_from}.getTime()), new org.joda.time.DateTime($P{p_date_to}.getTime()))).getHours()  > 24 ?
+    new Long(1000 * 60 * 60 *24)
+    :
+    new Long(1000 * 60 * 60)
+)]]></defaultValueExpression>
+		</parameter>
+		<parameter name="p_period_duration_plus" class="java.lang.Long" isForPrompting="false">
+			<defaultValueExpression><![CDATA[(
+    (org.joda.time.Hours.hoursBetween(new org.joda.time.DateTime($P{p_date_from}.getTime()), new org.joda.time.DateTime($P{p_date_to}.getTime()))).getHours()  > 24 ?
+    new Long((23*60*60*1000) + (59*60*1000) + (57*1000) - ($P{BONITA_TIME_ZONE}.getRawOffset() + $P{BONITA_TIME_ZONE}.getDSTSavings()))
+    :
+    new Long((59*60*1000) + (57*1000) )
+)]]></defaultValueExpression>
+		</parameter>
+		<parameter name="_p_date_from" class="java.lang.Long" isForPrompting="false">
+			<defaultValueExpression><![CDATA[$P{p_date_from}.getTime()]]></defaultValueExpression>
+		</parameter>
+		<parameter name="_p_date_to" class="java.lang.Long" isForPrompting="false">
+			<defaultValueExpression><![CDATA[$P{p_date_to}.getTime()]]></defaultValueExpression>
+		</parameter>
+		<parameter name="_p_apps_id" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA[$P{p_apps_id} != null ? " AND APS.PROCESSID = " + $P{p_apps_id} + " ": ""]]></defaultValueExpression>
+		</parameter>
+		<queryString language="BONITASQL">
+			<![CDATA[]]>
+		</queryString>
+		<field name="key" class="org.bonitasoft.report.scriptlet.AggragateScriptletKey">
+			<fieldDescription><![CDATA[key]]></fieldDescription>
+		</field>
+		<field name="measure" class="java.lang.Double">
+			<fieldDescription><![CDATA[measure]]></fieldDescription>
+		</field>
+		<variable name="dateformat" class="java.text.SimpleDateFormat">
+			<variableExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_DATE_FORMAT}, $P{REPORT_LOCALE})]]></variableExpression>
+			<initialValueExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_DATE_FORMAT}, $P{REPORT_LOCALE})]]></initialValueExpression>
+		</variable>
+		<variable name="timeFormat" class="java.text.SimpleDateFormat">
+			<variableExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_TIME_FORMAT}, $P{REPORT_LOCALE})]]></variableExpression>
+			<initialValueExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_TIME_FORMAT}, $P{REPORT_LOCALE})]]></initialValueExpression>
+		</variable>
+		<variable name="dateTimeformat" class="java.text.SimpleDateFormat">
+			<variableExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_DATETIME_FORMAT}, $P{REPORT_LOCALE})]]></variableExpression>
+			<initialValueExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_DATETIME_FORMAT}, $P{REPORT_LOCALE})]]></initialValueExpression>
+		</variable>
+		<variable name="bonitaChartDurationFormatter" class="org.bonitasoft.report.chart.customizer.BonitaReportPeriodFormatter">
+			<variableExpression><![CDATA[new BonitaReportPeriodFormatter($R{case_avg_time.graph.day.short}, $R{case_avg_time.graph.hour.short}, $R{case_avg_time.graph.minute.short}, $R{case_avg_time.graph.second.short})]]></variableExpression>
+		</variable>
+		<filterExpression><![CDATA[!"unknown".equals($F{key}.getCategory())
+&&
+!"unknown".equals($F{key}.getSerie())]]></filterExpression>
+	</subDataset>
+	<subDataset name="AppsName" uuid="8dc7625d-9858-4601-a308-7759edf23fee">
+		<parameter name="BONITA_TENANT_ID" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="BONITA_LOGGED_USER_ID" class="java.lang.String"/>
+		<parameter name="BONITA_BASE_URL" class="java.lang.String"/>
+		<parameter name="BONITA_REPORT_FOLDER" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="BONITA_HTML_FORM" class="java.lang.String">
+			<defaultValueExpression><![CDATA["<select name='date_range'>"
++"	<option value='today'>today</option>"
++"	<option value='yesterday'>yesterday</option>"
++"	<option value='last_7_days'>last 7 days</option>"
++"	<option value='last_30_days'>last 30 days</option>"
++"</select>"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="BONITA_HTML_MAX_REPORT_COUNT" class="java.lang.Integer" isForPrompting="false"/>
+		<parameter name="BONITA_EXPORT_FORMAT" class="java.lang.String">
+			<defaultValueExpression><![CDATA["HTML"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="BONITA_EXPORT_TO_PDF" class="java.lang.String"/>
+		<parameter name="BONITA_REPORT_URL" class="java.lang.String"/>
+		<parameter name="BONITA_TIME_ZONE" class="java.util.TimeZone" isForPrompting="false">
+			<defaultValueExpression><![CDATA[java.util.TimeZone.getDefault()]]></defaultValueExpression>
+		</parameter>
+		<parameter name="BONITA_LOCALE_DATE_FORMAT" class="java.lang.String"/>
+		<parameter name="BONITA_LOCALE_TIME_FORMAT" class="java.lang.String"/>
+		<parameter name="BONITA_LOCALE_DATETIME_FORMAT" class="java.lang.String"/>
+		<parameter name="p_period_duration" class="java.lang.Long" isForPrompting="false">
+			<defaultValueExpression><![CDATA[(
+    (org.joda.time.Hours.hoursBetween(new org.joda.time.DateTime($P{p_date_from}.getTime()), new org.joda.time.DateTime($P{p_date_to}.getTime()))).getHours()  > 24 ?
+    new Long(1000 * 60 * 60 *24)
+    :
+    new Long(1000 * 60 * 60 )
+)]]></defaultValueExpression>
+		</parameter>
+		<parameter name="p_period_duration_plus" class="java.lang.Long" isForPrompting="false">
+			<defaultValueExpression><![CDATA[(
+    (org.joda.time.Hours.hoursBetween(new org.joda.time.DateTime($P{p_date_from}.getTime()), new org.joda.time.DateTime($P{p_date_to}.getTime()))).getHours()  > 24 ?
+    new Long((23*60*60*1000) + (59*60*1000) + (57*1000) - ($P{BONITA_TIME_ZONE}.getRawOffset() + $P{BONITA_TIME_ZONE}.getDSTSavings()))
+    :
+    new Long((59*60*1000) + (57*1000) )
+)]]></defaultValueExpression>
+		</parameter>
+		<parameter name="p_state_name" class="java.lang.String">
+			<defaultValueExpression><![CDATA["%"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="p_apps_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="p_date_from" class="java.util.Date">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="p_date_to" class="java.util.Date">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="_p_date_from" class="java.lang.Long" isForPrompting="false">
+			<defaultValueExpression><![CDATA[$P{p_date_from}.getTime()]]></defaultValueExpression>
+		</parameter>
+		<parameter name="_p_date_to" class="java.lang.Long" isForPrompting="false">
+			<defaultValueExpression><![CDATA[$P{p_date_to}.getTime()]]></defaultValueExpression>
+		</parameter>
+		<parameter name="_p_apps_id" class="java.lang.String" isForPrompting="false">
+			<defaultValueExpression><![CDATA[($P{p_apps_id} != null && !"-1".equals($P{p_apps_id} )) ?
+    " AND APS.PROCESSID = " + $P{p_apps_id} + " "
+    : ""]]></defaultValueExpression>
+		</parameter>
+		<queryString language="BONITASQL">
+			<![CDATA[SELECT
+	APS.PROCESSID AS APS_PROCESS_ID,
+	APS.NAME AS APS_NAME
+FROM process_definition APS
+WHERE APS.PROCESSID = $P{p_apps_id}]]>
+		</queryString>
+		<field name="APS_PROCESS_ID" class="java.lang.Long"/>
+		<field name="APS_NAME" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="BONITA_TENANT_ID" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BONITA_LOGGED_USER_ID" class="java.lang.String"/>
+	<parameter name="BONITA_BASE_URL" class="java.lang.String"/>
+	<parameter name="BONITA_REPORT_FOLDER" class="java.lang.String"/>
+	<parameter name="BONITA_HTML_FORM" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BONITA_HTML_MAX_REPORT_COUNT" class="java.lang.Integer" isForPrompting="false"/>
+	<parameter name="BONITA_EXPORT_FORMAT" class="java.lang.String">
+		<defaultValueExpression><![CDATA["HTML"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BONITA_EXPORT_TO_PDF" class="java.lang.String"/>
+	<parameter name="BONITA_REPORT_URL" class="java.lang.String"/>
+	<parameter name="BONITA_TIME_ZONE" class="java.util.TimeZone" isForPrompting="false">
+		<defaultValueExpression><![CDATA[java.util.TimeZone.getDefault()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BONITA_LOCALE_DATE_FORMAT" class="java.lang.String"/>
+	<parameter name="BONITA_LOCALE_TIME_FORMAT" class="java.lang.String"/>
+	<parameter name="BONITA_LOCALE_DATETIME_FORMAT" class="java.lang.String"/>
+	<parameter name="p_date_from" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="p_date_to" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="p_apps_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="p_period_duration" class="java.lang.Long" isForPrompting="false">
+		<defaultValueExpression><![CDATA[(
+    (org.joda.time.Hours.hoursBetween(new org.joda.time.DateTime($P{p_date_from}.getTime()), new org.joda.time.DateTime($P{p_date_to}.getTime()))).getHours()  > 24 ?
+    new Long(1000 * 60 * 60 *24)
+    :
+    new Long(1000 * 60 * 60)
+)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="p_period_duration_plus" class="java.lang.Long" isForPrompting="false">
+		<defaultValueExpression><![CDATA[(
+    (org.joda.time.Hours.hoursBetween(new org.joda.time.DateTime($P{p_date_from}.getTime()), new org.joda.time.DateTime($P{p_date_to}.getTime()))).getHours()  > 24 ?
+    new Long((23*60*60*1000) + (59*60*1000) + (57*1000) - ($P{BONITA_TIME_ZONE}.getRawOffset() + $P{BONITA_TIME_ZONE}.getDSTSavings()))
+    :
+    new Long((59*60*1000) + (57*1000) )
+)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="_p_date_from" class="java.lang.Long" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{p_date_from}.getTime()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="_p_date_to" class="java.lang.Long" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{p_date_to}.getTime()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="_p_apps_id" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[($P{p_apps_id} != null && !"-1".equals($P{p_apps_id} )) ?
+    " AND APS.PROCESSID = " + $P{p_apps_id} + " "
+    : ""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BONITA_LOGGED_USER" class="java.lang.String"/>
+	<parameter name="BONITA_PORTAL_URL" class="java.lang.String"/>
+	<parameter name="BONITA_LOCALE_LANGUAGE" class="java.lang.String"/>
+	<queryString language="BONITASQL">
+		<![CDATA[SELECT
+	CS.PROCESSDEFINITIONID AS CS_PROCESS_DEFINITION_ID,
+	CS.NAME AS CS_NAME,
+	CS.STATEID AS CS_STATE_ID,
+	CS.STARTDATE AS CS_START_DATE,
+	(FLOOR(CS.STARTDATE/$P{p_period_duration})) as CS_START,
+	CS.ENDDATE AS CS_END_DATE,
+	(FLOOR(CS.ENDDATE/$P{p_period_duration})) as CS_END,
+	CS.ID AS CS_ID,
+	CS.SOURCEOBJECTID AS CS_SOURCEOBJECTID,
+	APS.PROCESSID AS APS_PROCESS_ID,
+	APS.NAME AS APS_NAME,
+	USR.FIRSTNAME AS USR_FIRSTNAME,
+	USR.LASTNAME AS USR_LASTNAME,
+	( CS.ENDDATE - CS.STARTDATE ) AS CS_DURATION
+FROM arch_process_instance  CS
+INNER JOIN process_definition APS ON CS.PROCESSDEFINITIONID = APS.PROCESSID
+INNER JOIN user_ USR ON CS.STARTEDBY = USR.ID
+WHERE CS.ENDDATE > 0
+AND CS.TENANTID = $P{BONITA_TENANT_ID}
+AND APS.TENANTID = $P{BONITA_TENANT_ID}
+AND USR.TENANTID = $P{BONITA_TENANT_ID}
+AND CS.ENDDATE BETWEEN $P{_p_date_from} AND $P{_p_date_to}
+$P!{_p_apps_id}
+ORDER BY 14 DESC, 6, 4]]>
+	</queryString>
+	<field name="CS_PROCESS_DEFINITION_ID" class="java.lang.Long"/>
+	<field name="CS_NAME" class="java.lang.String"/>
+	<field name="CS_STATE_ID" class="java.lang.Integer"/>
+	<field name="CS_START_DATE" class="java.lang.Long"/>
+	<field name="CS_START" class="java.lang.Long"/>
+	<field name="CS_END_DATE" class="java.lang.Long"/>
+	<field name="CS_END" class="java.lang.Long"/>
+	<field name="CS_ID" class="java.lang.Long"/>
+	<field name="CS_SOURCEOBJECTID" class="java.lang.Long"/>
+	<field name="APS_PROCESS_ID" class="java.lang.Long"/>
+	<field name="APS_NAME" class="java.lang.String"/>
+	<field name="USR_FIRSTNAME" class="java.lang.String"/>
+	<field name="USR_LASTNAME" class="java.lang.String"/>
+	<field name="CS_DURATION" class="java.lang.Double"/>
+	<variable name="decimalFormat" class="java.text.NumberFormat">
+		<variableExpression><![CDATA[java.text.NumberFormat.getInstance($P{REPORT_LOCALE})]]></variableExpression>
+	</variable>
+	<variable name="dateformat" class="java.text.SimpleDateFormat">
+		<variableExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_DATE_FORMAT}, $P{REPORT_LOCALE})]]></variableExpression>
+		<initialValueExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_DATE_FORMAT}, $P{REPORT_LOCALE})]]></initialValueExpression>
+	</variable>
+	<variable name="timeFormat" class="java.text.SimpleDateFormat">
+		<variableExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_TIME_FORMAT}, $P{REPORT_LOCALE})]]></variableExpression>
+		<initialValueExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_TIME_FORMAT}, $P{REPORT_LOCALE})]]></initialValueExpression>
+	</variable>
+	<variable name="dateTimeformat" class="java.text.SimpleDateFormat">
+		<variableExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_DATETIME_FORMAT}, $P{REPORT_LOCALE})]]></variableExpression>
+		<initialValueExpression><![CDATA[new SimpleDateFormat($P{BONITA_LOCALE_DATETIME_FORMAT}, $P{REPORT_LOCALE})]]></initialValueExpression>
+	</variable>
+	<variable name="_status_name" class="java.lang.String">
+		<variableExpression><![CDATA[$F{CS_STATE_ID}==1?"STARTED":$F{CS_STATE_ID}==6?"COMPLETED":"UNKOWN STATE"]]></variableExpression>
+	</variable>
+	<variable name="duration" class="java.lang.Long">
+		<variableExpression><![CDATA[$F{CS_END_DATE}-$F{CS_START_DATE}]]></variableExpression>
+	</variable>
+	<variable name="duration_sec" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{duration} != null ?
+    new Double( $V{duration} / 1000)
+    : null]]></variableExpression>
+	</variable>
+	<variable name="CS_START_DATE_SERIE" class="java.lang.String">
+		<variableExpression><![CDATA[$F{CS_START}.toString()]]></variableExpression>
+	</variable>
+	<variable name="CS_END_DATE_SERIE" class="java.lang.String">
+		<variableExpression><![CDATA[$F{CS_END}.toString()]]></variableExpression>
+	</variable>
+	<variable name="avg_duration" class="java.lang.Long" calculation="Average">
+		<variableExpression><![CDATA[$V{duration}]]></variableExpression>
+	</variable>
+	<variable name="dsCollectionAvg" class="java.util.ArrayList" resetType="None" calculation="System">
+		<initialValueExpression><![CDATA[new java.util.ArrayList()]]></initialValueExpression>
+	</variable>
+	<variable name="catsNSeriesValueAvg" class="java.util.HashMap" calculation="System">
+		<initialValueExpression><![CDATA[new java.util.HashMap()]]></initialValueExpression>
+	</variable>
+	<variable name="catsNSeriesValuesAvg" class="java.util.HashMap" calculation="System">
+		<initialValueExpression><![CDATA[new java.util.HashMap()]]></initialValueExpression>
+	</variable>
+	<variable name="mnAvg" class="java.lang.Double" resetType="Page">
+		<variableExpression><![CDATA[$P{REPORT_SCRIPTLET}.rangeMinValue("catsNSeriesValueAvg")]]></variableExpression>
+	</variable>
+	<variable name="mxAvg" class="java.lang.Double" resetType="Page">
+		<variableExpression><![CDATA[$P{REPORT_SCRIPTLET}.rangeMaxValue("catsNSeriesValueAvg")]]></variableExpression>
+	</variable>
+	<variable name="mapInfoAvg" class="java.util.HashMap" calculation="System">
+		<initialValueExpression><![CDATA[$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+	$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+		$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+			$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+				$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+					$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+                        $P{REPORT_SCRIPTLET}.buildMapAggInfo(
+                                $V{mapInfoAvg} ,
+                                    AggragateScriptlet.KEY_CATEGORIE_FIELD_NAME, "_status_name"),
+                                    AggragateScriptlet.KEY_SERIE_FIELD_NAME, "CS_END_DATE_SERIE"),
+                                    AggragateScriptlet.KEY_MEASURE_FIELD_NAME, "CS_DURATION"),
+                                    AggragateScriptlet.KEY_MAP_VALUE_FIELD_NAME, "catsNSeriesValueAvg"),
+                                    AggragateScriptlet.KEY_MAP_VALUES_FIELD_NAME, "catsNSeriesValuesAvg"),
+                                    AggragateScriptlet.KEY_DS_FIELD_NAME, "dsCollectionAvg"),
+                                    AggragateScriptlet.KEY_AGG_STAT_FIELD_NAME, AggragateScriptlet.AGG_STAT_AVG)]]></initialValueExpression>
+	</variable>
+	<variable name="dsCollectionMedian" class="java.util.ArrayList" resetType="None" calculation="System">
+		<initialValueExpression><![CDATA[new java.util.ArrayList()]]></initialValueExpression>
+	</variable>
+	<variable name="catsNSeriesValueMedian" class="java.util.HashMap" calculation="System">
+		<initialValueExpression><![CDATA[new java.util.HashMap()]]></initialValueExpression>
+	</variable>
+	<variable name="catsNSeriesValuesMedian" class="java.util.HashMap" calculation="System">
+		<initialValueExpression><![CDATA[new java.util.HashMap()]]></initialValueExpression>
+	</variable>
+	<variable name="mnMedian" class="java.lang.Double" resetType="Page">
+		<variableExpression><![CDATA[$P{REPORT_SCRIPTLET}.rangeMinValue("catsNSeriesValueMedian")]]></variableExpression>
+	</variable>
+	<variable name="mxMedian" class="java.lang.Double" resetType="Page">
+		<variableExpression><![CDATA[$P{REPORT_SCRIPTLET}.rangeMaxValue("catsNSeriesValueMedian")]]></variableExpression>
+	</variable>
+	<variable name="mapInfoMedian" class="java.util.HashMap" calculation="System">
+		<initialValueExpression><![CDATA[$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+	$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+		$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+			$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+				$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+					$P{REPORT_SCRIPTLET}.buildMapAggInfo(
+                        $P{REPORT_SCRIPTLET}.buildMapAggInfo(
+                                $V{mapInfoMedian} ,
+                                    AggragateScriptlet.KEY_CATEGORIE_FIELD_NAME, "_status_name"),
+                                    AggragateScriptlet.KEY_SERIE_FIELD_NAME, "CS_END_DATE_SERIE"),
+                                    AggragateScriptlet.KEY_MEASURE_FIELD_NAME, "CS_DURATION"),
+                                    AggragateScriptlet.KEY_MAP_VALUE_FIELD_NAME, "catsNSeriesValueMedian"),
+                                    AggragateScriptlet.KEY_MAP_VALUES_FIELD_NAME, "catsNSeriesValuesMedian"),
+                                    AggragateScriptlet.KEY_DS_FIELD_NAME, "dsCollectionMedian"),
+                                    AggragateScriptlet.KEY_AGG_STAT_FIELD_NAME, AggragateScriptlet.AGG_STAT_MEDIAN)]]></initialValueExpression>
+	</variable>
+	<variable name="aggInfo" class="java.util.ArrayList" calculation="System">
+		<initialValueExpression><![CDATA[$P{REPORT_SCRIPTLET}.buildArrayAggInfo(
+				$P{REPORT_SCRIPTLET}.buildArrayAggInfo(
+                        $V{aggInfo}, $V{mapInfoAvg}
+                    ),
+                    $V{mapInfoMedian}
+                )]]></initialValueExpression>
+	</variable>
+	<variable name="mn" class="java.lang.Long" resetType="Page"/>
+	<variable name="mx" class="java.lang.Long" resetType="Page">
+		<variableExpression><![CDATA[($V{mxAvg}.doubleValue() > $V{mxMedian}.doubleValue()) ?
+    (new org.joda.time.Duration(($V{mxAvg}.doubleValue() * 1.2).longValue())).getStandardSeconds()
+  : (new org.joda.time.Duration(($V{mxMedian}.doubleValue() * 1.2).longValue())).getStandardSeconds()]]></variableExpression>
+	</variable>
+	<variable name="bonitaDurationFormatter" class="org.bonitasoft.report.chart.customizer.BonitaReportPeriodFormatter">
+		<variableExpression><![CDATA[new BonitaReportPeriodFormatter($R{case_avg_time.graph.day.short}, $R{case_avg_time.graph.hour.short}, $R{case_avg_time.graph.minute.short}, $R{case_avg_time.graph.second.short})]]></variableExpression>
+	</variable>
+	<title>
+		<band height="480" splitType="Stretch">
+			<frame>
+				<reportElement uuid="06417c61-ae98-4c12-aed1-8c7077fc6a27" key="header" x="0" y="0" width="1210" height="104"/>
+				<textField>
+					<reportElement uuid="6d6608ef-4caa-4c6a-a2bb-d66d00d97cfa" key="title" style="bonita_report_title" x="0" y="0" width="725" height="33">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_title"/>
+						<property name="net.sf.jasperreports.export.html.tag" value="h1"/>
+					</reportElement>
+					<textElement markup="none"/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.title}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="799ab7f9-3308-424f-a145-c9053f94e390" style="bonita_report_description" x="0" y="68" width="1210" height="35">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_description"/>
+					</reportElement>
+					<textElement markup="none"/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.description}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="4aee1e68-3023-4291-a16e-8368f21b4038" style="bonita_report_text_bold" x="337" y="41" width="100" height="16">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_text_bold"/>
+					</reportElement>
+					<box leftPadding="2"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.generated_on}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="2c58d571-f820-4747-ba4d-3f7c92f613c3" style="bonita_report_text_bold" x="16" y="41" width="100" height="16">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_text_bold"/>
+					</reportElement>
+					<box leftPadding="2"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.generated_by}]]></textFieldExpression>
+				</textField>
+				<textField pattern="">
+					<reportElement uuid="6563ffe0-8b88-45e1-8499-63441fffe8ec" style="bonita_report_text_bold" x="438" y="41" width="190" height="16">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_text"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$V{dateTimeformat}.format(new Date())]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="97eae7e8-58f5-48e6-9395-10115e918b70" style="bonita_report_text_bold" x="118" y="41" width="190" height="16">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_text"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$P{BONITA_LOGGED_USER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report" hyperlinkType="Reference">
+					<reportElement uuid="58dc23c3-3139-498f-82d4-43121984c959" x="1110" y="0" width="100" height="28">
+						<property name="net.sf.jasperreports.export.html.class" value="exportCell"/>
+						<printWhenExpression><![CDATA["HTML".equals($P{BONITA_EXPORT_FORMAT})]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.export}]]></textFieldExpression>
+					<hyperlinkReferenceExpression><![CDATA[$P{BONITA_EXPORT_TO_PDF}]]></hyperlinkReferenceExpression>
+				</textField>
+				<line>
+					<reportElement uuid="4476a588-8717-4e41-8e6b-44058b6fbd28" style="bonita_report_shape_line" positionType="Float" x="0" y="103" width="1210" height="1">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_shape_line"/>
+					</reportElement>
+				</line>
+				<image>
+					<reportElement uuid="02262157-ed72-4a60-99c2-812533809d6a" x="0" y="41" width="16" height="16"/>
+					<imageExpression><![CDATA[$P{BONITA_REPORT_FOLDER} +  "/img/avatar-default.gif"]]></imageExpression>
+				</image>
+				<image>
+					<reportElement uuid="f519ee3b-2e05-43a9-b8b7-a4fe288a0944" x="320" y="41" width="16" height="16"/>
+					<imageExpression><![CDATA[$P{BONITA_REPORT_FOLDER} + "/img/date_16x16.png"]]></imageExpression>
+				</image>
+			</frame>
+			<frame>
+				<reportElement uuid="2be4f7cc-1654-4acb-8573-1b5781c08c71" key="parameters" positionType="Float" x="0" y="104" width="1210" height="186"/>
+				<textField>
+					<reportElement uuid="5b6b7977-6d33-41c2-ab2c-13167369f2f0" style="bonita_report_section_title" x="0" y="0" width="725" height="25">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_section_title"/>
+						<property name="net.sf.jasperreports.export.html.tag" value="h1"/>
+					</reportElement>
+					<textElement markup="none"/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.parameter_title}]]></textFieldExpression>
+				</textField>
+				<componentElement>
+					<reportElement uuid="6bf0fd6c-ddab-4574-bb8b-3b2cc3501e2c" x="0" y="26" width="1210" height="159">
+						<printWhenExpression><![CDATA["HTML".equals($P{BONITA_EXPORT_FORMAT})]]></printWhenExpression>
+					</reportElement>
+					<hc:html xmlns:hc="http://jasperreports.sourceforge.net/htmlcomponent" xsi:schemaLocation="http://jasperreports.sourceforge.net/htmlcomponent http://jasperreports.sourceforge.net/xsd/htmlcomponent.xsd" scaleType="RetainShape" horizontalAlign="Left" verticalAlign="Top">
+						<hc:htmlContentExpression><![CDATA[$P{BONITA_HTML_FORM}]]></hc:htmlContentExpression>
+					</hc:html>
+				</componentElement>
+				<line>
+					<reportElement uuid="04654a4a-540a-450d-aa87-3b9d203d42dc" style="bonita_report_shape_line" positionType="Float" x="0" y="185" width="1210" height="1">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_shape_line"/>
+					</reportElement>
+				</line>
+				<frame>
+					<reportElement uuid="644e5d4f-0c99-4c28-bcde-71a1d64a5cc4" key="PDF parameters" x="0" y="26" width="1210" height="50">
+						<printWhenExpression><![CDATA["PDF".equals($P{BONITA_EXPORT_FORMAT})]]></printWhenExpression>
+					</reportElement>
+					<textField>
+						<reportElement uuid="76e18d0d-1850-4a2c-92b0-bfc4f12de71b" x="10" y="0" width="322" height="20"/>
+						<textElement/>
+						<textFieldExpression><![CDATA[$R{from:} + " "+ $V{dateformat}.format($P{p_date_from})+" " +$R{to:}  + " "+$V{dateformat}.format($P{p_date_to})]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement uuid="7864fbab-59d3-4b63-aebf-bb3b53d58e9b" x="352" y="0" width="296" height="20">
+							<printWhenExpression><![CDATA["-1".equals($P{p_apps_id})]]></printWhenExpression>
+						</reportElement>
+						<textElement/>
+						<textFieldExpression><![CDATA[$R{Apps} + ": "+ $R{All}]]></textFieldExpression>
+					</textField>
+					<componentElement>
+						<reportElement uuid="1c4eeac1-6da6-4151-a244-297076e9683e" x="352" y="0" width="296" height="21">
+							<printWhenExpression><![CDATA[!"-1".equals($P{p_apps_id})]]></printWhenExpression>
+						</reportElement>
+						<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+							<datasetRun subDataset="AppsName" uuid="841740c1-e00f-47ee-9389-6987ee274d6e">
+								<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+								<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+							</datasetRun>
+							<jr:listContents height="21" width="296">
+								<textField>
+									<reportElement uuid="9e962e86-e169-4acd-80dc-0c7b01537415" x="0" y="0" width="296" height="20"/>
+									<textElement/>
+									<textFieldExpression><![CDATA[$R{Apps} + ": "+ $F{APS_NAME}]]></textFieldExpression>
+								</textField>
+							</jr:listContents>
+						</jr:list>
+					</componentElement>
+				</frame>
+			</frame>
+			<textField evaluationTime="Report">
+				<reportElement uuid="86a6df7f-1910-4e52-8c50-0e0b15f6d49d" key="NO-DATA" x="322" y="299" width="587" height="20">
+					<property name="net.sf.jasperreports.export.html.class" value="bonita_report_description"/>
+					<printWhenExpression><![CDATA[$F{CS_ID} == null && $V{REPORT_COUNT} <= 0]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="none"/>
+				<textFieldExpression><![CDATA[$R{case_avg_time.nodata}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement uuid="eab36467-41ce-4c05-8c51-ddf6d1c99084" key="graph &amp; task_counts" positionType="Float" x="0" y="290" width="1210" height="190">
+					<printWhenExpression><![CDATA[$F{CS_ID} != null]]></printWhenExpression>
+				</reportElement>
+				<multiAxisChart>
+					<chart isShowLegend="false" evaluationTime="Report" theme="default">
+						<reportElement uuid="a36a99de-2c3a-4ce9-b3dd-d5a6f42dcace" x="0" y="0" width="725" height="177"/>
+						<chartTitle/>
+						<chartSubtitle/>
+						<chartLegend/>
+					</chart>
+					<multiAxisPlot>
+						<plot/>
+						<axis position="leftOrTop">
+							<lineChart>
+								<chart isShowLegend="false" evaluationTime="Report" customizerClass="org.bonitasoft.report.chart.customizer.PeriodBasedChartCustomizer" theme="default">
+									<reportElement uuid="9bc3f497-63c1-4ae3-a537-aa4b1527d8ad" key="median line" x="0" y="0" width="725" height="177" backcolor="#FFFFFF">
+										<property name="PredefinedColors" value="STARTED:#cced8b;COMPLETED:#92caee"/>
+										<property name="MaximumBarWidth1" value="0.05"/>
+										<property name="ScriptRenderer" value="renderer.setMaximumBarWidth(0.02);"/>
+									</reportElement>
+									<chartTitle color="#000000"/>
+									<chartSubtitle color="#000000"/>
+									<chartLegend textColor="#000000" backgroundColor="#FFFFFF"/>
+								</chart>
+								<categoryDataset>
+									<dataset>
+										<datasetRun subDataset="chartDs" uuid="81a49d17-6ea0-4e5e-947a-c45271a617c3">
+											<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+											<dataSourceExpression><![CDATA[$P{REPORT_SCRIPTLET}.toJRBeanCollectionDataSource(
+    "catsNSeriesValueMedian",
+    "dsCollectionMedian",
+    1,1,0, false)]]></dataSourceExpression>
+										</datasetRun>
+									</dataset>
+									<categorySeries>
+										<seriesExpression><![CDATA[$F{key}.getCategory()]]></seriesExpression>
+										<categoryExpression><![CDATA[(
+    (org.joda.time.Hours.hoursBetween(new org.joda.time.DateTime($P{p_date_from}.getTime()), new org.joda.time.DateTime($P{p_date_to}.getTime()))).getHours()  > 24 ?
+    $V{dateformat}.format(new Date( Long.valueOf($F{key}.getSerie()) * $P{p_period_duration}))
+    :
+    $V{timeFormat}.format(new Date(Long.valueOf($F{key}.getSerie()) * $P{p_period_duration}))
+)]]></categoryExpression>
+										<valueExpression><![CDATA[(new org.joda.time.Duration($F{measure}.longValue())).getStandardSeconds()]]></valueExpression>
+										<labelExpression><![CDATA[$R{case_avg_time.legend.median} + ":" + $V{bonitaChartDurationFormatter}.format(new org.joda.time.Duration($F{measure}.longValue()).getStandardSeconds())]]></labelExpression>
+										<itemHyperlink hyperlinkType="Reference">
+											<hyperlinkReferenceExpression><![CDATA[$P{BONITA_REPORT_URL}
++"&p_date_from="+ (Long.valueOf($F{key}.getSerie()) * $P{p_period_duration})
++"&p_date_to="+(Long.valueOf($F{key}.getSerie()) * $P{p_period_duration}+$P{p_period_duration_plus})
++"&p_state_name="+ $F{key}.getCategory()
++"&p_apps_id="+($P{p_apps_id} != null ? $P{p_apps_id} : "-1")]]></hyperlinkReferenceExpression>
+											<hyperlinkWhenExpression><![CDATA["HTML".equals($P{BONITA_EXPORT_FORMAT}) ? true : false]]></hyperlinkWhenExpression>
+											<hyperlinkTooltipExpression><![CDATA[$R{case_avg_time.legend.median} + ":" + $V{bonitaChartDurationFormatter}.format(new org.joda.time.Duration($F{measure}.longValue()).getStandardSeconds())]]></hyperlinkTooltipExpression>
+										</itemHyperlink>
+									</categorySeries>
+								</categoryDataset>
+								<linePlot>
+									<plot>
+										<seriesColor seriesOrder="0" color="#92CAEE"/>
+									</plot>
+									<categoryAxisLabelExpression><![CDATA[(     (org.joda.time.Hours.hoursBetween(new org.joda.time.DateTime($P{p_date_from}.getTime()), new org.joda.time.DateTime($P{p_date_to}.getTime()))).getHours()  > 24 ?         $R{case_avg_time.graph.x.title.days}     :         $R{case_avg_time.graph.x.title.hour} )]]></categoryAxisLabelExpression>
+									<categoryAxisFormat>
+										<axisFormat/>
+									</categoryAxisFormat>
+									<valueAxisLabelExpression><![CDATA[$R{case_avg_time.graph.y.title}]]></valueAxisLabelExpression>
+									<valueAxisFormat>
+										<axisFormat/>
+									</valueAxisFormat>
+									<rangeAxisMaxValueExpression><![CDATA[$V{mx}]]></rangeAxisMaxValueExpression>
+								</linePlot>
+							</lineChart>
+						</axis>
+						<axis position="rightOrBottom">
+							<barChart>
+								<chart isShowLegend="false" evaluationTime="Report" customizerClass="org.bonitasoft.report.chart.customizer.PeriodBasedBarChartCustomizer" theme="default">
+									<reportElement uuid="0a8870ba-b887-4eff-8d09-69412a3dce9e" key="avg bar" x="0" y="0" width="725" height="177" backcolor="#FFFFFF">
+										<property name="PredefinedColors" value="COMPLETED:#cced8b"/>
+										<property name="MaximumBarWidth1" value="0.05"/>
+										<property name="ScriptRenderer" value="renderer.setMaximumBarWidth(0.02);"/>
+									</reportElement>
+									<chartTitle color="#000000"/>
+									<chartSubtitle color="#000000"/>
+									<chartLegend textColor="#000000" backgroundColor="#FFFFFF"/>
+								</chart>
+								<categoryDataset>
+									<dataset>
+										<datasetRun subDataset="chartDs" uuid="75ad6009-48fb-4771-86ae-e7e57bcaaf3d">
+											<parametersMapExpression><![CDATA[$P{REPORT_PARAMETERS_MAP}]]></parametersMapExpression>
+											<dataSourceExpression><![CDATA[$P{REPORT_SCRIPTLET}.toJRBeanCollectionDataSource(
+    "catsNSeriesValueAvg",
+    "dsCollectionAvg",
+    1,1,0, false)]]></dataSourceExpression>
+										</datasetRun>
+									</dataset>
+									<categorySeries>
+										<seriesExpression><![CDATA[$F{key}.getCategory()]]></seriesExpression>
+										<categoryExpression><![CDATA[(
+    (org.joda.time.Hours.hoursBetween(new org.joda.time.DateTime($P{p_date_from}.getTime()), new org.joda.time.DateTime($P{p_date_to}.getTime()))).getHours()  > 24 ?
+    $V{dateformat}.format(new Date( Long.valueOf($F{key}.getSerie()) * $P{p_period_duration}))
+    :
+    $V{timeFormat}.format(new Date(Long.valueOf($F{key}.getSerie()) * $P{p_period_duration}))
+)]]></categoryExpression>
+										<valueExpression><![CDATA[(new org.joda.time.Duration($F{measure}.longValue())).getStandardSeconds()]]></valueExpression>
+										<labelExpression><![CDATA[$R{case_avg_time.legend.avg} + " " + $V{bonitaChartDurationFormatter}.format(new org.joda.time.Duration($F{measure}.longValue()).getStandardSeconds())]]></labelExpression>
+										<itemHyperlink hyperlinkType="Reference">
+											<hyperlinkReferenceExpression><![CDATA[$P{BONITA_REPORT_URL}
++"&p_date_from="+ (Long.valueOf($F{key}.getSerie()) * $P{p_period_duration})
++"&p_date_to="+(Long.valueOf($F{key}.getSerie()) * $P{p_period_duration}+$P{p_period_duration_plus})
++"&p_state_name="+ $F{key}.getCategory()
++"&p_apps_id="+($P{p_apps_id} != null ? $P{p_apps_id} : "-1")]]></hyperlinkReferenceExpression>
+											<hyperlinkWhenExpression><![CDATA["HTML".equals($P{BONITA_EXPORT_FORMAT}) ? true : false]]></hyperlinkWhenExpression>
+											<hyperlinkTooltipExpression><![CDATA[$R{case_avg_time.legend.avg} + " " + $V{bonitaChartDurationFormatter}.format( new org.joda.time.Duration($F{measure}.longValue()).getStandardSeconds() )]]></hyperlinkTooltipExpression>
+										</itemHyperlink>
+									</categorySeries>
+								</categoryDataset>
+								<barPlot isShowTickLabels="false" isShowTickMarks="false">
+									<plot/>
+									<itemLabel/>
+									<categoryAxisLabelExpression><![CDATA[(     (org.joda.time.Hours.hoursBetween(new org.joda.time.DateTime($P{p_date_from}.getTime()), new org.joda.time.DateTime($P{p_date_to}.getTime()))).getHours()  > 24 ?         $R{case_avg_time.graph.x.title.days}     :         $R{case_avg_time.graph.x.title.hour} )]]></categoryAxisLabelExpression>
+									<categoryAxisFormat>
+										<axisFormat verticalTickLabels="true"/>
+									</categoryAxisFormat>
+									<valueAxisLabelExpression><![CDATA[]]></valueAxisLabelExpression>
+									<valueAxisFormat>
+										<axisFormat verticalTickLabels="false" axisLineColor="#FEFEFE"/>
+									</valueAxisFormat>
+									<rangeAxisMaxValueExpression><![CDATA[$V{mx}]]></rangeAxisMaxValueExpression>
+								</barPlot>
+							</barChart>
+						</axis>
+					</multiAxisPlot>
+				</multiAxisChart>
+				<rectangle>
+					<reportElement uuid="5661e5fe-ed77-44dc-826e-fb481597723b" key="legend-opend" x="775" y="100" width="20" height="20" backcolor="#CCED8A"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement uuid="81261e6b-96c6-4963-a582-28edeec61cff" style="bonita_report_hyperlink" x="800" y="100" width="264" height="20">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_hyperlink_none"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.legend.avg}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement uuid="416c994c-90d3-4f75-9091-e899e737bc88" key="legend-completed" x="775" y="125" width="20" height="20" backcolor="#73BCEC"/>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement uuid="47375bd6-d3f3-4e67-aad1-62c56da77297" style="bonita_report_hyperlink" x="800" y="125" width="264" height="20">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_hyperlink_none"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.legend.median}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="1c6f8756-5703-4286-8acf-7cffc776cd2d" style="bonita_report_shape_line" positionType="Float" x="0" y="189" width="1210" height="1">
+						<property name="net.sf.jasperreports.export.html.class" value="bonita_report_shape_line"/>
+					</reportElement>
+				</line>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<printWhenExpression><![CDATA[($F{CS_STATE_ID} != null)]]></printWhenExpression>
+			<frame>
+				<reportElement uuid="61cc7141-bb6f-479b-b200-0b049cd538c8" key="table header" x="0" y="0" width="1210" height="20"/>
+				<textField>
+					<reportElement uuid="c5203ab9-2e3a-4e73-a3fa-d9daabc9ddd9" style="bonita_report_table_header" x="0" y="0" width="168" height="20">
+						<property name="net.sf.jasperreports.export.html.tag.tr.class" value="tr"/>
+						<property name="net.sf.jasperreports.export.html.class" value="th th_1"/>
+						<property name="net.sf.jasperreports.export.html.tag.table.class" value="table_report"/>
+						<property name="net.sf.jasperreports.export.html.tag.td" value="th"/>
+						<property name="net.sf.jasperreports.export.html.tag.table.part" value="thead"/>
+						<property name="net.sf.jasperreports.export.html.tag.table.part.class" value="thead"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.table_header_case}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="7ec2152b-2cb3-493d-b034-e47040b4ae62" style="bonita_report_table_header" x="760" y="0" width="225" height="20">
+						<property name="net.sf.jasperreports.export.html.class" value="th"/>
+						<property name="net.sf.jasperreports.export.html.tag.td" value="th"/>
+						<property name="net.sf.jasperreports.export.html.tag.table.part" value="thead"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.table_header_end_date}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="fe74abde-c640-46c4-8fae-00a5c51b2df4" style="bonita_report_table_header" x="535" y="0" width="225" height="20">
+						<property name="net.sf.jasperreports.export.html.class" value="th"/>
+						<property name="net.sf.jasperreports.export.html.tag.td" value="th"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.table_header_started_date}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="3bb80bee-c0c0-4a82-9857-836377b3817a" style="bonita_report_table_header" x="168" y="0" width="367" height="20">
+						<property name="net.sf.jasperreports.export.html.class" value="th"/>
+						<property name="net.sf.jasperreports.export.html.tag.td" value="th"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.table_header_apps}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="7e69c484-8246-4966-b6e7-846410ae4497" style="bonita_report_table_header" x="985" y="0" width="225" height="20">
+						<property name="net.sf.jasperreports.export.html.class" value="th"/>
+						<property name="net.sf.jasperreports.export.html.tag.td" value="th"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$R{case_avg_time.table_header_duration}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="45">
+			<printWhenExpression><![CDATA[("HTML".equals($P{BONITA_EXPORT_FORMAT})) && ($V{REPORT_COUNT} <= $P{BONITA_HTML_MAX_REPORT_COUNT}) || ("PDF".equals($P{BONITA_EXPORT_FORMAT}))]]></printWhenExpression>
+			<frame>
+				<reportElement uuid="ff52ebe5-a3d9-4d58-ad34-3f76b00b344e" x="0" y="0" width="1210" height="45">
+					<printWhenExpression><![CDATA[("HTML".equals($P{BONITA_EXPORT_FORMAT})) && ($V{REPORT_COUNT} <= $P{BONITA_HTML_MAX_REPORT_COUNT}) || ("PDF".equals($P{BONITA_EXPORT_FORMAT}))]]></printWhenExpression>
+				</reportElement>
+				<textField hyperlinkType="Reference">
+					<reportElement uuid="7049add2-9cb1-4d13-b2fe-d585da99ec6b" style="bonita_report_table_line" x="0" y="0" width="168" height="45">
+						<property name="net.sf.jasperreports.export.html.class" value="td"/>
+						<property name="net.sf.jasperreports.export.html.tag.tr.class" value="tr"/>
+						<property name="net.sf.jasperreports.export.html.tag.table.class" value="table_report"/>
+						<property name="net.sf.jasperreports.export.html.tag.table.part.class" value="tbody"/>
+						<property name="net.sf.jasperreports.export.html.tag.table.part" value="tbody"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{CS_SOURCEOBJECTID}]]></textFieldExpression>
+					<hyperlinkReferenceExpression><![CDATA[$P{BONITA_PORTAL_URL}+"#?id="+$F{CS_ID}+"&_p="+("COMPLETED".equals($V{_status_name}) ? "archivedcasemoredetailsadmin" : "casemoredetailsadmin")+"&_pf="+$P{BONITA_LOGGED_USER_ID}]]></hyperlinkReferenceExpression>
+					<hyperlinkWhenExpression><![CDATA[(("HTML".equals($P{BONITA_EXPORT_FORMAT})) ? true : false)]]></hyperlinkWhenExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" hyperlinkType="Reference">
+					<reportElement uuid="4957867c-3f3a-4a45-b1c0-532ae2cc9f72" style="bonita_report_table_line" x="168" y="0" width="367" height="45">
+						<property name="net.sf.jasperreports.export.html.class" value="td"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{APS_NAME}]]></textFieldExpression>
+					<hyperlinkReferenceExpression><![CDATA[$P{BONITA_PORTAL_URL}+"#?id="+$F{APS_PROCESS_ID}+"&_p=processmoredetailsadmin&_pf="+$P{BONITA_LOGGED_USER_ID}]]></hyperlinkReferenceExpression>
+					<hyperlinkWhenExpression><![CDATA[(("HTML".equals($P{BONITA_EXPORT_FORMAT})) ? true : false)]]></hyperlinkWhenExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="a41d4ffc-63ad-4678-b2fc-2329d0c8a295" style="bonita_report_table_line" x="535" y="0" width="225" height="45">
+						<property name="net.sf.jasperreports.export.html.class" value="td"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$V{dateTimeformat}.format(new Date($F{CS_START_DATE}))]]></textFieldExpression>
+				</textField>
+				<textField pattern="">
+					<reportElement uuid="96afa0e8-3c8b-40ff-a205-60363138e8c3" style="bonita_report_table_line" x="760" y="0" width="225" height="45">
+						<property name="net.sf.jasperreports.export.html.class" value="td"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$V{dateTimeformat}.format(new Date($F{CS_END_DATE}))]]></textFieldExpression>
+				</textField>
+				<textField pattern="">
+					<reportElement uuid="2220da17-f56c-48a1-a1e3-7ffc67683eb6" style="bonita_report_table_line" x="985" y="0" width="225" height="45">
+						<property name="net.sf.jasperreports.export.html.class" value="td"/>
+					</reportElement>
+					<textElement/>
+					<textFieldExpression><![CDATA[$V{bonitaDurationFormatter}.format( $V{duration_sec}.longValue() )]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<noData>
+		<band height="261">
+			<textField>
+				<reportElement uuid="3fc0043e-d4f2-4f13-b2d2-6817764e49f4" x="0" y="0" width="288" height="22"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BONITA_TENANT_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8dd8c77f-8613-4622-a506-77a88586e723" x="0" y="22" width="288" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BONITA_LOGGED_USER_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0abd783b-03bb-4976-86d5-aaf9ef32512c" x="0" y="42" width="288" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BONITA_BASE_URL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="804735ad-b53a-4747-92bd-a65b7b02a000" x="0" y="62" width="288" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BONITA_REPORT_FOLDER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8372040c-1a08-4651-917b-19cc8fe67f64" x="0" y="121" width="288" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{p_date_from}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="85f0476b-bea1-428d-b072-014f8a29eac1" x="0" y="82" width="1210" height="39"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BONITA_HTML_FORM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cdcfa6f8-8390-4295-a009-613e44addfa6" x="0" y="141" width="288" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{p_date_to}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="90b77c75-5d95-4980-9348-f787ac5dfe8b" x="0" y="201" width="288" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{p_period_duration}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cb615109-259b-4771-9d94-108621209ce0" x="0" y="181" width="288" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{p_apps_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a08053c4-d05e-4330-8a86-049882de8ef9" x="0" y="221" width="288" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{_p_date_from}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3a81a5db-5ffa-45d6-b9a7-5f3b44dbba3a" x="0" y="241" width="288" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{_p_date_to}]]></textFieldExpression>
+			</textField>
+		</band>
+	</noData>
+</jasperReport>

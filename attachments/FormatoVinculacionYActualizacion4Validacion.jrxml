@@ -1,0 +1,3593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FormatoVinculacionYActualizacion" language="groovy" pageWidth="1030" pageHeight="1480" columnWidth="990" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="f013d12a-1fd7-4e5f-b59c-03dac375f716">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1482"/>
+	<parameter name="AGENCIA" class="java.lang.String"/>
+	<parameter name="NOMBRE_ASESOR" class="java.lang.String"/>
+	<parameter name="CODIGO_ASESOR" class="java.lang.String"/>
+	<parameter name="FECHA" class="java.lang.String"/>
+	<parameter name="APELLIDO1" class="java.lang.String"/>
+	<parameter name="GENERO" class="java.lang.String"/>
+	<parameter name="TIPO_SOLICITANTE" class="java.lang.String"/>
+	<parameter name="ESTADO_CIVIL" class="java.lang.String"/>
+	<parameter name="DECLARA_RENTA" class="java.lang.String"/>
+	<parameter name="NRO_ASESORIA" class="java.lang.String"/>
+	<parameter name="TIPO_DOCUMENTO" class="java.lang.String"/>
+	<parameter name="NRO_DOCUMENTO" class="java.lang.String"/>
+	<parameter name="FECHA_EXP_DOC" class="java.lang.String"/>
+	<parameter name="CIUDAD_NAC" class="java.lang.String"/>
+	<parameter name="CIUDAD_EXP_DOC" class="java.lang.String"/>
+	<parameter name="NACIONALIDAD" class="java.lang.String"/>
+	<parameter name="FECHA_NAC" class="java.lang.String"/>
+	<parameter name="NRO_HIJOS" class="java.lang.String"/>
+	<parameter name="NIVEL_ESTUDIOS" class="java.lang.String"/>
+	<parameter name="TITULO" class="java.lang.String"/>
+	<parameter name="ESTRATO" class="java.lang.String"/>
+	<parameter name="ACTIVIDAD_LABORAL" class="java.lang.String"/>
+	<parameter name="DIRECCION_RES" class="java.lang.String"/>
+	<parameter name="BARRIO" class="java.lang.String"/>
+	<parameter name="MUNICIPIO" class="java.lang.String"/>
+	<parameter name="DEPARTAMENTO" class="java.lang.String"/>
+	<parameter name="TELEFONO_RES" class="java.lang.String"/>
+	<parameter name="CELULAR" class="java.lang.String"/>
+	<parameter name="EMAIL" class="java.lang.String"/>
+	<parameter name="PERSONAS_CARGO" class="java.lang.String"/>
+	<parameter name="TIPO_VIVIENDA" class="java.lang.String"/>
+	<parameter name="NOMBRE_ARRENDADOR" class="java.lang.String"/>
+	<parameter name="MANEJA_REC_PUB" class="java.lang.String"/>
+	<parameter name="TELEFONO_ARRENDADOR" class="java.lang.String"/>
+	<parameter name="MANEJA_CUENTA_EXT" class="java.lang.String"/>
+	<parameter name="TIPO_MONEDA" class="java.lang.String"/>
+	<parameter name="TIPO_CONTRATO" class="java.lang.String"/>
+	<parameter name="TIPO_OPERACION" class="java.lang.String"/>
+	<parameter name="UBICACION_PUE_TRA" class="java.lang.String"/>
+	<parameter name="APELLIDO2" class="java.lang.String"/>
+	<parameter name="NOMBRES" class="java.lang.String"/>
+	<parameter name="TIPO_IMPRESION" class="java.lang.String"/>
+	<parameter name="DIRECCION_CORRESP" class="java.lang.String"/>
+	<parameter name="TIPO_PRODUCTO" class="java.lang.String"/>
+	<parameter name="SECTOR" class="java.lang.String"/>
+	<parameter name="CARGO" class="java.lang.String"/>
+	<parameter name="DIRECCION_TRABAJO" class="java.lang.String"/>
+	<parameter name="DEPTO_EMPRESA" class="java.lang.String"/>
+	<parameter name="NOMBRE_EMPRESA" class="java.lang.String"/>
+	<parameter name="TELEFONO_EMP" class="java.lang.String"/>
+	<parameter name="FECHA_INGRESO" class="java.lang.String"/>
+	<parameter name="OPERACIONES_EXT" class="java.lang.String"/>
+	<parameter name="TOTAL_ACTIVOS" class="java.lang.String"/>
+	<parameter name="TOTAL_PASIVOS" class="java.lang.String"/>
+	<parameter name="REF_FAM_NOM" class="java.lang.String"/>
+	<parameter name="REF_FAM_CIU" class="java.lang.String"/>
+	<parameter name="REF-PER_NOM" class="java.lang.String"/>
+	<parameter name="CAMARA_COMERCIO" class="java.lang.String"/>
+	<parameter name="REF_PER_CIU" class="java.lang.String"/>
+	<parameter name="FAMILIAR_TRABAJA_CONFIAR" class="java.lang.String"/>
+	<parameter name="NOMBRE_FAM_CONFIAR" class="java.lang.String"/>
+	<parameter name="DEUDAS_TERCEROS" class="java.lang.String"/>
+	<parameter name="DEUDAS_FINANCIERAS" class="java.lang.String"/>
+	<parameter name="GASTOS_FAMILIARES" class="java.lang.String"/>
+	<parameter name="OTROS_GASTOS" class="java.lang.String"/>
+	<parameter name="TOTAL_EGRESOS" class="java.lang.String"/>
+	<parameter name="AHORROS_INVERSIONES" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="VEHICULO_PROPIEDADES" class="java.lang.String"/>
+	<parameter name="TOTAL_INGRESOS" class="java.lang.String"/>
+	<parameter name="TOTAL_ING_FAM" class="java.lang.String"/>
+	<parameter name="NO_CUENTA_EXT" class="java.lang.String"/>
+	<parameter name="GENERO_CONYUGE" class="java.lang.String"/>
+	<parameter name="FEC_NAC_CONYUGE" class="java.lang.String"/>
+	<parameter name="NOMBRE_CONYUGE" class="java.lang.String"/>
+	<parameter name="APELLIDO1_CONYUGE" class="java.lang.String"/>
+	<parameter name="APELLIDO2_CONYUGE" class="java.lang.String"/>
+	<parameter name="TIP_DOC_CONYUGE" class="java.lang.String"/>
+	<parameter name="DOC_CONYUGE" class="java.lang.String"/>
+	<parameter name="NIV_EST_CONYUGE" class="java.lang.String"/>
+	<parameter name="ACT_LAB_CONYUGE" class="java.lang.String"/>
+	<parameter name="REGIMEN_SOCIAL" class="java.lang.String"/>
+	<parameter name="MUNI_EMPRESA" class="java.lang.String"/>
+	<parameter name="CIU_CUENTA_EXT" class="java.lang.String"/>
+	<parameter name="PAIS_CUENTA_EXT" class="java.lang.String"/>
+	<parameter name="EMPRESA_CONYUGE" class="java.lang.String"/>
+	<parameter name="TIP_LOCAL_NEG" class="java.lang.String"/>
+	<parameter name="NOMBRE_DUENO_LOCAL" class="java.lang.String">
+		<parameterDescription><![CDATA[Nombre arrendador local del negocio.]]></parameterDescription>
+	</parameter>
+	<parameter name="TEL_DUENO_LOCAL" class="java.lang.String">
+		<parameterDescription><![CDATA[Telefono arrendador local]]></parameterDescription>
+	</parameter>
+	<parameter name="ENTIDAD_EXT" class="java.lang.String"/>
+	<parameter name="PAR_FAM_CONFIAR" class="java.lang.String"/>
+	<parameter name="TEL_FAM_CONFIAR" class="java.lang.String"/>
+	<parameter name="CARGO_CONYUGE" class="java.lang.String"/>
+	<parameter name="REF_FAM_TEL" class="java.lang.String"/>
+	<parameter name="REF_FAM_PAR" class="java.lang.String"/>
+	<parameter name="REF_PER_TEL" class="java.lang.String"/>
+	<parameter name="REF_FIN_ENT" class="java.lang.String"/>
+	<parameter name="REF_FIN_PRO" class="java.lang.String"/>
+	<parameter name="REF_COM_ENT" class="java.lang.String"/>
+	<parameter name="BENEFICIARIO_NOMBRE1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_NOMBRE2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_NOMBRE3" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_NOMBRE4" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_TIP_DOC1" class="java.lang.String"/>
+	<parameter name="BENEFICIARIO_TIP_DOC2" class="java.lang.String"/>
+	<parameter name="BENEFICIARIO_TIP_DOC3" class="java.lang.String"/>
+	<parameter name="BENEFICIARIO_TIP_DOC4" class="java.lang.String"/>
+	<parameter name="BENEFICIARIO_DOC1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_DOC2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_DOC3" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_DOC4" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_PAR1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_PAR2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_PAR3" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_PAR4" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_NIV_EDU1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_NIV_EDU2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_NIV_EDU3" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_NIV_EDU4" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_FEC_NAC1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_FEC_NAC2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_FEC_NAC3" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BENEFICIARIO_FEC_NAC4" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="NO_TIENE_REF_COM" class="java.lang.String"/>
+	<parameter name="NO_TIENE_REF_FIN" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="IMG_SELECTED_LOGO" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["F:\\opt\\templates\\img\\LogoConfiar.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMG_SELECTED_FALSE" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["F:\\OPT\\templates\\img\\SelectedFalse.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMG_SELECTED_TRUE" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["F:\\opt\\templates\\img\\SelectedTrue.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMG_CHECKBOX_TRUE" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["F:\\opt\\templates\\img\\CheckBoxTrue.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMG_CHECKBOX_FALSE" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["F:\\opt\\templates\\img\\CheckBoxFalse.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMG_DIRECCIONES" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["F:\\OPT\\templates\\img\\direcciones.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMG_LABORAL" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["F:\\OPT\\templates\\img\\laboral.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMG_FINANCIERA" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["F:\\OPT\\templates\\img\\financiera.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMG_REFERENCIAS" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["F:\\OPT\\templates\\img\\referencias.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMG_REFERENCIAS2" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["F:\\OPT\\templates\\img\\referencias2.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="OCUPACION" class="java.lang.String"/>
+	<parameter name="NUM_EMPLEADOS" class="java.lang.String"/>
+	<parameter name="PAGA_COMERCIO" class="java.lang.String"/>
+	<parameter name="REGISTRA_COMERCIO" class="java.lang.String"/>
+	<parameter name="MES_LOCAL_ACT" class="java.lang.String"/>
+	<parameter name="TEL_TRAB_CONYUGE" class="java.lang.String"/>
+	<parameter name="DIR_EMP_CONYUGE" class="java.lang.String"/>
+	<parameter name="MUN_CONYUGE" class="java.lang.String"/>
+	<parameter name="DEP_CONYUGE" class="java.lang.String"/>
+	<parameter name="NOMBRE_NEGOCIO" class="java.lang.String">
+		<parameterDescription><![CDATA[Nombre de la empresa Si  es independiente]]></parameterDescription>
+	</parameter>
+	<parameter name="INGRESOS_PRINCIPALES" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT '1' AS REGISTRO]]>
+	</queryString>
+	<field name="REGISTRO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<image>
+				<reportElement uuid="1dbf5fdc-74be-44b6-8582-aff7f43bfbe1" x="4" y="2" width="198" height="52"/>
+				<imageExpression><![CDATA[$P{IMG_SELECTED_LOGO}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="ca46f837-9e3f-48fa-ac4a-4297c696468a" x="207" y="2" width="781" height="52"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["VINCULACIÓN Y ACTUALIZACIÓN PERSONA NATURAL"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="5143f037-7866-4810-8b68-a81c85978b51" x="837" y="18" width="136" height="20"/>
+				<textElement/>
+				<text><![CDATA[F-GPS-0011-V11 TD 57A
+]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="1379" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="82832e8f-1c71-45b2-8236-3a0015ed48d3" x="673" y="1000" width="318" height="40"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="4ee82881-3fcb-422d-a383-9ebc1155b0ba" x="31" y="1265" width="125" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="56867c9f-2d25-47b1-b9f2-56e3fb8c90c4" x="510" y="1165" width="481" height="26"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2e6578b2-838c-498b-944c-912b5cf86c2b" x="353" y="979" width="320" height="101"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="bdd880fe-ff8e-4be3-a0da-728f47329c1e" x="32" y="979" width="321" height="21"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="7dd53956-96ac-45d2-99cb-e963493d4dbd" x="494" y="263" width="224" height="70"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="607e00d4-973b-4b73-83c1-ab398d6455e8" x="1" y="1" width="251" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="4c7a3109-70e2-4b25-915e-a330b688c025" x="1" y="31" width="646" height="43"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="7337dd90-356d-4ba3-8756-3bd4d5c4fdcb" x="29" y="467" width="322" height="37"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="90d944ad-9adb-4579-975f-287cc11189cc" x="1" y="98" width="137" height="90"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="6baaa690-3394-4b30-98dd-0710cf65e242" x="668" y="1" width="132" height="31"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="a7dee684-f6d6-41de-aee2-2fedab943560" x="-1" y="188" width="990" height="20" forecolor="#00CC00" backcolor="#008000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="bec84455-f36d-4b6a-b5ef-f590fd342787" x="1" y="188" width="989" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS PERSONALES]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="05475a57-e918-4230-aebc-7b4ed7e5c75b" x="1" y="208" width="254" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="a5be7580-fb23-4584-9b3d-bcd0974040a9" x="255" y="208" width="269" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="bab7474b-50a4-44a2-ae9b-68641c08e64f" x="524" y="208" width="466" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="44cfe469-9c5e-44cf-a22a-6ee42f61a1d6" x="1" y="228" width="132" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="43ce697f-0b9f-42df-9051-b38058b07183" x="133" y="228" width="121" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="661ed00d-4ee6-43eb-82e1-6a699202e464" x="254" y="228" width="134" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="24991200-366f-4d02-8d23-42380ab9aaa9" x="388" y="228" width="135" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="3b43a38f-55f7-4277-b506-9da66dd800b2" x="523" y="228" width="135" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="a8eb8d96-8c53-41ec-a984-ae56fa7f00b9" x="658" y="228" width="182" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="64cca2fd-adcd-4b7a-a839-ed46c185aad2" x="840" y="228" width="150" height="35"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="fbdd957b-f069-49cc-bb9a-888d5fb2aef3" x="1" y="208" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Primer Apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9c72f662-fb08-41ad-9542-da0cc7bff313" x="257" y="208" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Segundo Apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="76c551f9-740d-4b36-ae58-67d4cb8dae61" x="528" y="208" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nombre Completo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="93d69f9e-1e2e-4882-b991-f0aa0431350c" x="6" y="228" width="127" height="15"/>
+				<textElement/>
+				<text><![CDATA[Documento de identidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9ef8566e-4e98-4267-8c7c-acc1b9eaa216" x="137" y="228" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Número Doc:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a42f7604-acca-4cc8-8257-3100d1745bc4" x="257" y="230" width="122" height="15"/>
+				<textElement/>
+				<text><![CDATA[Fecha de expedición]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="826ac3ba-8952-4ebe-b083-01d4bf4f2eca" x="393" y="228" width="115" height="15"/>
+				<textElement/>
+				<text><![CDATA[Ciudad de Expedición]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cb6ef5d3-5cea-45f2-9e23-6fa579c9c408" x="527" y="228" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Lugar de nacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="39f2d69c-e8e8-4a33-8996-a70efc2d3842" x="664" y="230" width="128" height="15"/>
+				<textElement/>
+				<text><![CDATA[Pais de nacionalidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e560d4b2-2a19-493e-be2d-ea3ecb9bde7c" x="845" y="229" width="133" height="15"/>
+				<textElement/>
+				<text><![CDATA[Fecha de nacimiento]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="d7c6b89e-3a55-4736-9c20-77eabc31138b" x="1" y="263" width="49" height="70"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="632fc8be-4f28-4c33-95ce-ead071bc3370" x="50" y="263" width="444" height="70"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="6ab758f6-e96f-4c50-b370-a27eb6005963" x="718" y="263" width="272" height="70"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="a243d69c-1a4e-4266-acd6-26cc372ee1ec" x="718" y="263" width="272" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="d1faf796-3d1a-4e45-8594-ef9c70ed41a3" x="54" y="266" width="100" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nivel de estudios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b4cb2df6-8e60-4ca8-ba13-34689b5a377e" x="80" y="283" width="90" height="15"/>
+				<textElement/>
+				<text><![CDATA[Primaria o menos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1ea62e64-75eb-4bfe-95c0-1f9f2247b911" x="208" y="283" width="65" height="15"/>
+				<textElement/>
+				<text><![CDATA[Bachiller]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="13bc8f4a-1def-4e03-90f7-68996c36a607" x="300" y="283" width="50" height="15"/>
+				<textElement/>
+				<text><![CDATA[Técnico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5a3a9f9b-9578-463b-83eb-9ed1de478c3d" x="391" y="283" width="71" height="15"/>
+				<textElement/>
+				<text><![CDATA[Tecnológico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ed9c8707-582d-412e-98d7-427ca2daeddc" x="6" y="268" width="29" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f1c73de7-67d3-47d1-9e54-0db5a3505a30" x="80" y="300" width="62" height="15"/>
+				<textElement/>
+				<text><![CDATA[Universitario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2bab0c77-0542-44d4-926e-0534ba59705d" x="54" y="316" width="86" height="15"/>
+				<textElement/>
+				<text><![CDATA[Titulo Obtenido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1d49b483-fa1f-467e-af80-c577868c6257" x="498" y="266" width="100" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estado Civil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2fc7aa16-e793-4a4d-a8bf-45557ba4ea37" x="523" y="285" width="41" height="15"/>
+				<textElement/>
+				<text><![CDATA[Soltero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="09ab9554-8662-46f6-a0b5-937571136181" x="522" y="302" width="48" height="15"/>
+				<textElement/>
+				<text><![CDATA[Separado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="33f20520-d0e3-4d7f-a530-f133e0f5e42d" x="658" y="283" width="58" height="15"/>
+				<textElement/>
+				<text><![CDATA[Unión Libre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20cf8b12-713e-40ed-95ca-51b84d67dfca" x="591" y="283" width="39" height="15"/>
+				<textElement/>
+				<text><![CDATA[Casado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ad525cfd-6d12-40a4-a9f2-54b8001c973a" x="591" y="302" width="41" height="15"/>
+				<textElement/>
+				<text><![CDATA[Viudo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8a51957e-4590-40f0-9108-3c5aadf81a40" x="723" y="267" width="81" height="13"/>
+				<textElement/>
+				<text><![CDATA[Número de hijos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a3bed77f-ef48-400b-84cd-c48f98753e68" x="723" y="287" width="266" height="30"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Número de personas que dependen económicamente de usted:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1a7dd973-f83b-4f54-8185-85678cfaeb20" x="32" y="290" width="14" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[F]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="75c18653-2b86-42b3-a82d-80f351aa6ccf" x="30" y="309" width="19" height="15"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cccd1a14-ee4b-4a5c-aeeb-804617bc5c36" x="38" y="116" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Actualización]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0a58325c-0709-4eac-8bda-2cb9db13be7b" x="38" y="148" width="88" height="15"/>
+				<textElement/>
+				<text><![CDATA[Vinculación]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="23a4a514-2cd0-4fb7-9766-f75a3e429851" x="138" y="98" width="135" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1e051a7f-5b46-4384-b9ed-1edbea42d10d" x="138" y="158" width="136" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="3e95d793-c9ac-40b8-9043-8b79ab213bbb" x="138" y="128" width="135" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="613dc1cd-8fe7-4ff1-8d3e-efcdf5eb61da" x="141" y="98" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nro.Asesoría]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7cde988d-6961-4780-871f-08bdc10e075c" x="161" y="136" width="43" height="20"/>
+				<textElement/>
+				<text><![CDATA[Ahorro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="757ff50c-b0fe-4507-9334-360fde791c77" x="226" y="136" width="42" height="20"/>
+				<textElement/>
+				<text><![CDATA[Crédito]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4ccbfdb2-4c46-4f39-8e72-cf39d7369e8a" x="141" y="160" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Cuota]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="f2d02912-3b98-426b-b31f-10adf9deda63" x="273" y="98" width="251" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="30e3f771-5fe8-43e8-b521-82351c6446ad" x="273" y="128" width="251" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="9e009763-d832-4846-90ee-9e3c62315efc" x="273" y="158" width="251" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b9584990-0344-436e-8c5b-fa8a68980633" x="277" y="98" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Producto de Crédito]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="07826420-5213-4675-909f-05ca341e87ae" x="524" y="128" width="147" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="feecd76f-7103-41c0-896b-088faa17173b" x="524" y="98" width="147" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="8e741718-f499-498b-b49d-831d18f520e4" x="524" y="158" width="147" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="46a13054-995f-48fa-91fd-de20730d28e1" x="671" y="98" width="128" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="8c9f041d-3d9f-48fa-a29b-31c16c4f6223" x="671" y="128" width="128" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="d9a29b61-a911-4c8a-a43d-5c1c020d6917" x="671" y="158" width="128" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="af18212a-ee7b-4fa3-a682-f96aa2f3f1c1" x="277" y="128" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Producto de Crédito]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="eb76827b-cb48-478d-8769-5fa43467f8cf" x="277" y="160" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Producto de Crédito]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="b1df679f-1eed-4035-a40a-086e8419b13d" x="799" y="98" width="191" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f1dd6d41-68a8-4eff-8883-b5652c1778d8" x="799" y="128" width="191" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="38a36de0-0b6c-4922-a3a1-05bacae8e907" x="799" y="158" width="191" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="50cc5067-9a5f-4c46-aa0f-47adcd1915f3" x="528" y="101" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Monto solicitado ($):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="45c42609-adbb-4bb7-bac5-8e0b2cf9daa5" x="528" y="131" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Monto solicitado ($):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="81e03991-1d89-4532-b9a7-40bb54a6d2c4" x="528" y="160" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Monto solicitado ($):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="55a29158-907f-4aff-93be-690f1595add6" x="675" y="101" width="78" height="15"/>
+				<textElement/>
+				<text><![CDATA[Plazo(meses):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="221768c8-8a18-4725-bf95-5cd52e79d7cf" x="675" y="131" width="78" height="15"/>
+				<textElement/>
+				<text><![CDATA[Plazo(meses):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e483bdb6-1c85-43d1-988b-d2a1bd6be7df" x="675" y="160" width="78" height="15"/>
+				<textElement/>
+				<text><![CDATA[Plazo(meses):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5384a039-2760-43e6-b542-dea270f0d170" x="801" y="101" width="90" height="15"/>
+				<textElement/>
+				<text><![CDATA[Cuota crédito($):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="675418a5-41bf-4203-89f2-57f0eb174c30" x="801" y="128" width="90" height="15"/>
+				<textElement/>
+				<text><![CDATA[Cuota crédito($):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="609506bf-6ffb-4e31-8149-c17e70d66164" x="801" y="160" width="90" height="15"/>
+				<textElement/>
+				<text><![CDATA[Cuota crédito($):]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="a07c7eec-667d-4715-a4f0-ce7a66938032" x="799" y="1" width="192" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="15209e2a-1b19-49d3-8f5c-460f9c11deb8" x="252" y="1" width="416" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="549bc6dc-752e-4f91-8524-b8997941c1c7" x="3" y="34" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Es usted:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1cfb9bc7-8126-43b4-8fb6-b9dc0cb875e9" x="24" y="58" width="57" height="15"/>
+				<textElement/>
+				<text><![CDATA[Solicitante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="64cfdef9-2965-4477-aba2-33068258d5dd" x="111" y="58" width="50" height="15"/>
+				<textElement/>
+				<text><![CDATA[Codeudor]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="44bae759-2ef1-468e-aed3-ba327722332b" x="1" y="75" width="990" height="20" forecolor="#00CC00" backcolor="#008000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="6896bdd7-e874-44a3-92d1-b3f727ec0326" x="674" y="2" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Codigo del Asesor]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="be6271d1-9a56-480e-86b5-0684c53f8448" x="4" y="15" width="235" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{AGENCIA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5b9585c7-06ac-4119-9933-41a70f029f88" x="256" y="15" width="151" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NOMBRE_ASESOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="77c5d5d2-6fe0-4d9f-9f6c-b6233738ae80" x="674" y="15" width="126" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{CODIGO_ASESOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="631b469c-1418-4e7f-852b-117ad702dbe5" x="800" y="15" width="183" height="15"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{FECHA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="96848140-efdd-45d2-a248-24915766e8ab" x="199" y="59" width="190" height="15"/>
+				<textElement/>
+				<text><![CDATA[Representante legal de menor de edad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5dcf1ec3-dace-4056-b66d-d23b0e72d68c" x="418" y="58" width="176" height="15"/>
+				<textElement/>
+				<text><![CDATA[Autorizado para manejo de cuenta]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="d04bb359-c209-43d2-87b9-52da3bf95c1f" x="647" y="31" width="344" height="43"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="39535732-8134-4c90-aa19-4d139931b48b" x="648" y="32" width="343" height="30"/>
+				<textElement/>
+				<text><![CDATA[Si es codeudor o Representante Legal escriba AQUÍ el número del documento del Titular:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="99d8a446-3b33-425d-b5e6-c99468198340" x="1" y="77" width="990" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRODUCTOS O SERVICIOS A SOLICITAR]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="e651a168-dc96-41d9-a362-298f02e91bc4" x="1" y="333" width="191" height="60"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="a80ef17b-3d30-478b-9572-0bd1dbb4349e" x="802" y="2" width="171" height="15"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="44db6dd6-6c1f-4dc8-a00e-2675b5107688" x="6" y="333" width="180" height="15"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de vivienda que habita:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="07ec4ea0-4c22-41c7-9a79-2c446b447503" x="255" y="0" width="100" height="15"/>
+				<textElement>
+					<font isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nombre del Asesor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="efcb208b-3b4c-4782-9b71-5ede5d4b1aa1" x="29" y="352" width="35" height="15"/>
+				<textElement/>
+				<text><![CDATA[Propia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5258174b-21f4-4b37-a9e9-ea0928ec84d9" x="119" y="352" width="51" height="15"/>
+				<textElement/>
+				<text><![CDATA[Arrendada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0f54ec09-57b7-4796-8809-264ca8ccfa2a" x="26" y="372" width="45" height="15"/>
+				<textElement/>
+				<text><![CDATA[Familiar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a62a990-dcb0-4b8e-8cfb-9a928a7f8412" x="94" y="372" width="33" height="15"/>
+				<textElement/>
+				<text><![CDATA[Padres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4e7da023-228f-447a-8113-6aa7cf1d025e" x="156" y="373" width="28" height="15"/>
+				<textElement/>
+				<text><![CDATA[Otros]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f492b51f-d467-4226-946f-48af32e4f63c" x="4" y="2" width="41" height="15"/>
+				<textElement/>
+				<text><![CDATA[Agencia]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="6730f2de-a613-4aca-adaf-10b198a0280d" x="192" y="333" width="51" height="60"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="ddc632a0-9fb2-4281-9fa6-fa3de5e9ac9e" x="198" y="333" width="45" height="30"/>
+				<textElement/>
+				<text><![CDATA[  Estrato Vivienda]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2eb54416-02a2-42c4-9a0d-ad08dad1e1c8" x="243" y="333" width="475" height="60"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="40b2c19e-ac0d-43a6-8e4e-d02a551da25d" x="246" y="333" width="226" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Si la vivienda es arrendada, especifique:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="40005ab6-6b87-4c93-a003-e9638c0eaf94" x="246" y="347" width="206" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nombre del arrendador o agencia:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="47f5506e-e8b9-470c-a42d-8ab82041dd5c" x="718" y="333" width="272" height="61"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b5308ba8-8684-4de3-85a3-59fe63b97497" x="721" y="336" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Teléfono del dueño:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="a4922dd0-b12f-411d-8616-0b1331d4f2b3" x="0" y="393" width="733" height="47"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="42d88279-88e0-41df-8eda-4634f99fb0b1" x="732" y="393" width="258" height="47"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="ea710b9c-1187-40d1-b6a0-1a3fa60a7f8e" x="7" y="396" width="119" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ocupación principal:    ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="f396d8e2-5d20-4ad1-8364-5d2e0bba8893" x="0" y="440" width="418" height="27"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2cd662d9-7569-46b8-ace6-44d55b6bb1ef" x="418" y="440" width="572" height="27"/>
+			</rectangle>
+			<image>
+				<reportElement uuid="70db9aee-9277-467d-b034-3c08010d908e" x="1" y="468" width="27" height="111"/>
+				<imageExpression><![CDATA[$P{IMG_DIRECCIONES}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="0d29bcfd-d5da-47d4-b38e-ee9948a30542" x="1" y="579" width="32" height="257"/>
+				<imageExpression><![CDATA[$P{IMG_LABORAL}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="c61508a5-7473-4e92-917d-7b1563a2fd82" x="778" y="396" width="194" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Maneja Ud. recursos públicos?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="292d6b9c-a75f-4ed3-b635-14ece4cfdb8f" x="6" y="447" width="165" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Afiliado a la seguridad social: ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="5e25eb09-2737-4f39-9664-a1e238d5c9f4" x="29" y="504" width="127" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="3a7c09b3-f1a3-436c-8b87-11b5f72e125c" x="30" y="539" width="321" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="d0b2ebfc-da19-4997-927e-b7f48de3ec92" x="149" y="396" width="60" height="15"/>
+				<textElement/>
+				<text><![CDATA[Asalariado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1b4837b0-489f-41c1-8372-e5da7a11cff8" x="655" y="411" width="78" height="15"/>
+				<textElement/>
+				<text><![CDATA[Independiente
+                                                                               __ Formalizado  __Independiente Agro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a22869de-3eb0-4e5b-8d00-be8d4765b70a" x="425" y="447" width="83" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Declara Renta:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bad7679d-c139-4575-80df-4dc4226df2a2" x="542" y="448" width="13" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4cb38578-3fb5-4285-a64b-68470c4e9a07" x="35" y="468" width="173" height="15"/>
+				<textElement/>
+				<text><![CDATA[Dirección residencia (Apto, bloque)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="91258888-7d2e-4579-adef-bcec178664cf" x="35" y="505" width="121" height="15"/>
+				<textElement/>
+				<text><![CDATA[Teléfono de Residencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="498e9b21-ae5b-488d-a1c3-59be3757c97a" x="38" y="541" width="214" height="15"/>
+				<textElement/>
+				<text><![CDATA[Dirección del lugar de trabajo (Of. Principal)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="8774a10a-7c23-4912-802a-35c2d656d0ce" x="615" y="467" width="117" height="37"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="3d8e48e7-dda6-4f8a-99fe-1cc1edb14d3d" x="732" y="467" width="258" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="1c8136a8-8c21-47ad-bc5f-d303821d1636" x="618" y="468" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Municipio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6f9bda89-ed7e-4755-a860-805f91c65cdc" x="736" y="468" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Departamento]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="0ad0bb14-f9a4-4d0a-8535-51c5a178ef9c" x="32" y="579" width="956" height="15" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="e33d2e2b-d298-435c-82cb-28503d4b4b7b" x="45" y="578" width="943" height="15" forecolor="#000000" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SI USTED ES ASALARIADO O EMPLEADO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="79cfb6f2-846c-411f-b19d-ecf1305a1018" x="33" y="656" width="956" height="15" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5f1e4e28-78c3-40e2-9840-f50c7bef86f2" x="155" y="504" width="218" height="35"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="efb069c9-cec0-4132-aa98-af919a78d9ed" x="355" y="468" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Barrio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="eafb2a0e-767c-492f-a457-0995d9697e48" x="162" y="504" width="40" height="15"/>
+				<textElement/>
+				<text><![CDATA[Celular]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="0d12f948-79c1-4bbd-8a3d-0826d435841b" x="373" y="504" width="219" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="fea1a9ae-a582-4033-b870-f2f4b01e891d" x="592" y="504" width="398" height="35"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="1ba9acf5-36f7-48bf-8623-2a766eafc137" x="37" y="656" width="939" height="15" forecolor="#000000" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SI USTED ES INDEPENDIENTE]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="24f740b3-cc9a-47d7-95b0-2ffca4d65fb0" x="351" y="539" width="157" height="37"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="35d75e75-2c36-4795-b76c-62c4d1cd0ce0" x="508" y="539" width="190" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="105da84f-2ae7-4122-8d71-a9ac86b436f4" x="402" y="504" width="189" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección de correspondencia: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4c3b8724-53a2-4c4a-af64-24fcdbbc3779" x="413" y="523" width="68" height="15"/>
+				<textElement/>
+				<text><![CDATA[Residencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8a703a60-92d2-4e3d-ad74-879a2ae41cdf" x="598" y="504" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Correo electrónico]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2763b7b7-a795-422f-8a34-120316e7d394" x="698" y="539" width="292" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="f603f434-22e6-4cfd-9928-1ed5a80cd0b0" x="355" y="541" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Municipio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e8d0febe-1892-44f4-9399-d5b12cf23a95" x="515" y="541" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Departamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b7f68300-c6e1-42a0-80dd-99676447edc8" x="701" y="541" width="120" height="15"/>
+				<textElement/>
+				<text><![CDATA[Teléfono donde trabaja]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="f056760a-565d-4dc6-bbc1-9894e6ce2aad" x="32" y="596" width="139" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="96db6930-cebb-40e5-869c-fc070beddb15" x="171" y="596" width="428" height="33"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="d83748b1-0d02-4eb2-83c7-766d592bd54f" x="599" y="596" width="154" height="33"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="9e63bb2b-174a-4eb2-a645-6222acc1ef40" x="753" y="596" width="237" height="33"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="56a6980c-53a2-4b49-b45d-98509144b542" x="33" y="599" width="100" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Contrato:    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f1a192c2-989b-4965-be4d-fbad4e54a3d4" x="132" y="614" width="37" height="15"/>
+				<textElement/>
+				<text><![CDATA[Fijo
+__Otro.  Cuál?]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2a9799da-db9e-4f8b-aaa6-a1edd99ce921" x="171" y="629" width="819" height="25"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5416d0a1-cdac-48ae-8b38-961c7ea2ad02" x="32" y="706" width="386" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="3bf4b22d-856d-4345-b338-0d75a5e06e3f" x="175" y="630" width="200" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nombre de la empresa en la que trabaja ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d2cf4f52-d458-42eb-8d6c-55158a08217d" x="175" y="598" width="48" height="15"/>
+				<textElement/>
+				<text><![CDATA[Cargo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c3700bb4-77aa-4a80-923c-a651a089175d" x="601" y="598" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Teléfono empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0f6f8d75-7bf5-4af4-9220-f7009b12962a" x="758" y="598" width="117" height="15"/>
+				<textElement/>
+				<text><![CDATA[Fecha de Vinculación]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="daf6cac9-aa39-4221-8c1b-055cfd287e28" x="32" y="673" width="520" height="33"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="24efcbcc-e902-4f47-8dc4-d1d034ebf7fc" x="33" y="738" width="956" height="15" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="c3656946-4c92-45ed-b550-c914de019d71" x="38" y="738" width="939" height="15" forecolor="#000000" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Si posee negocio, diligencie:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="a63ea73b-124c-4764-b4a9-0cc302315752" x="552" y="673" width="146" height="33"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="9b901bce-66c2-48af-b3fa-f9ddd18469c4" x="698" y="673" width="293" height="33"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="ce5b4100-e85d-4b9f-810d-cfcb6f75f98b" x="725" y="674" width="243" height="15"/>
+				<textElement/>
+				<text><![CDATA[Tiempo que lleva ejerciendo la actividad actual?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="beeadb65-6bd4-49a0-9fc5-7fc821487df1" x="559" y="675" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[No Empleados]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="8e981228-d14f-4bb6-8bad-fd3a6d3a0a6f" x="32" y="753" width="386" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2ceb411e-17a6-4b6d-b319-753d0e8932b0" x="418" y="753" width="403" height="45"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1e7b6c6d-c0b7-4ac2-8c33-bed9a2e4a24e" x="821" y="753" width="170" height="45"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="07751e58-e576-42bf-8a62-a767251e52ed" x="35" y="674" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Ocupación:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cbd00177-cc4a-43bf-9bcd-97ddf4e5aa1a" x="37" y="708" width="161" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ubicación puesto de trabajo:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="e2200c42-e3e9-43ec-8f91-8328dc9f093a" x="418" y="706" width="573" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="dc39042a-daa8-4883-b42c-b1c2b6bcfc0d" x="426" y="715" width="46" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sector]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b86a74f-629c-494a-99d5-d643dbb0efe0" x="488" y="715" width="45" height="15"/>
+				<textElement/>
+				<text><![CDATA[Cultivar ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="2e555ea6-c2be-4ceb-ab3e-4124266698ef" x="1" y="838" width="30" height="353"/>
+				<imageExpression><![CDATA[$P{IMG_FINANCIERA}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="144b4aff-dd0d-42b9-bbe3-6b4176b27037" x="36" y="753" width="107" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nombre del negocio]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="46d7a5ff-7122-4e48-8d00-347259b9b7ee" x="32" y="798" width="592" height="40"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="0e301bfb-6cd0-4aef-b079-b2f3377c8595" x="35" y="797" width="203" height="26"/>
+				<textElement/>
+				<text><![CDATA[Si el local es arrendado especifique:
+Nombre del dueño:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8a1deae2-bd75-4bef-9c5e-245456934b59" x="424" y="753" width="100" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[El local es:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9a4fc64f-1518-4278-8d95-d82c326edf2c" x="829" y="753" width="135" height="15"/>
+				<textElement/>
+				<text><![CDATA[Meses en el local actual:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="09dd2a17-309d-4f29-b3cc-209ada8d4fa9" x="623" y="798" width="175" height="40"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="97e6fa97-c7a8-46cc-92cc-ea9f69fc03d7" x="798" y="798" width="193" height="40"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="42e4642e-124e-46b8-b1f6-a7ff29d5fbf4" x="627" y="799" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Teléfono del dueño:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="610d7cca-13c1-4c1d-857f-fbe0915b0cd9" x="799" y="818" width="190" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="5c65dfd6-a54e-49e0-8f1c-01ad6eaa5242" x="801" y="801" width="143" height="15"/>
+				<textElement/>
+				<text><![CDATA[Posee Cámara Comercio?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="005bec27-65b9-4566-a75d-4eb0eace7b6b" x="802" y="823" width="131" height="15"/>
+				<textElement/>
+				<text><![CDATA[Paga Ind. Y Comercio?]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="403f368b-e5ad-4808-a9e6-04e50ab6d2aa" x="32" y="840" width="956" height="15" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="9fbfb1f6-3f09-4489-adeb-f206036df585" x="38" y="838" width="951" height="20" forecolor="#000000" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OPERACIONES EN MONEDA EXTRANJERA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="7c4453f2-3d30-4990-bf17-2a4f43aacac5" x="33" y="855" width="267" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="612bff38-322e-40ee-921c-e18a5985b8e5" x="33" y="947" width="956" height="15" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="f2d6d66c-5361-4146-8967-79564460ef9f" x="41" y="947" width="951" height="15" forecolor="#000000" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORMACIÓN BÁSICA FINANCIERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0ac90b0e-29fb-4d68-a897-9dec8f8f8a53" x="215" y="708" width="82" height="15"/>
+				<textElement/>
+				<text><![CDATA[Fijo en local     ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="83626a27-cebe-4f13-b6d8-9e094951f0d3" x="53" y="722" width="63" height="15"/>
+				<textElement/>
+				<text><![CDATA[Ambulante]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="e097aef6-46d2-455a-b1b5-b798904c6f39" x="32" y="964" width="323" height="15" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="bda2365b-5637-42de-abb4-f5e79bc70a29" x="353" y="964" width="321" height="15" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e59b42a8-1a00-4aff-a245-c08cc28adac2" x="673" y="964" width="317" height="15" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="53454b2d-152c-4b33-a4b5-9a58ff409646" x="33" y="885" width="200" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="712896b5-11d0-492d-b448-3481679af966" x="35" y="862" width="181" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[¿Posee cuentas en el exterior?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e63b27d0-1a5f-43e3-ac70-55e0cd91f548" x="373" y="862" width="71" height="15"/>
+				<textElement/>
+				<text><![CDATA[__SÍ   __NO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="c3b53754-9314-4c26-bb28-dd97709dd30c" x="300" y="855" width="294" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="568254f5-a8e7-496e-906a-302f0ace647d" x="35" y="885" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Tipo de Moneda:]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="ae1d3b2c-cae2-4a66-854b-c68781ad481f" x="8" y="60" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_SOLICITANTE}.equals("1")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="951a36bf-a061-4469-9842-7119a94e019b" x="94" y="60" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_SOLICITANTE}.equals("2")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="eabc5464-b6ba-431a-8eb5-5e3986211b34" x="182" y="61" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_SOLICITANTE}.equals("3")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="d390c123-8bc0-4bf2-a9ad-32dcb8844aed" x="403" y="60" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_SOLICITANTE}.equals("4")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="6eebe2cc-a2f4-46ee-8e16-0c2cb20cfdb3" x="13" y="118" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_IMPRESION}.equals("1")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="3cd549e2-4903-423f-ad82-3717de206d0c" x="13" y="149" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_IMPRESION}.equals("0")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="a5e7f6f4-67d7-41c2-8516-c4a1e42eaaa5" x="144" y="138" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_PRODUCTO}.equals("1")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="046cb484-8a21-4e1b-818f-87cae6218608" x="209" y="138" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_PRODUCTO}.equals("2")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="ae5a1374-bbe1-4aa5-978e-992295b8810d" x="11" y="292" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{GENERO}.equals("2")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="ac53b9ec-7c86-4b86-96bf-4e6f67016ed8" x="11" y="311" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{GENERO}.equals("1")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="03e6bad5-b7e7-4b5a-a4ed-ec7186d588fe" x="508" y="287" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ESTADO_CIVIL}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="49f6c4bd-572c-4b9a-91fa-5fc97aad9963" x="577" y="287" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ESTADO_CIVIL}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="9b048787-16c7-4f55-9bf7-e4d3ea1824cc" x="643" y="286" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ESTADO_CIVIL}.equals("5")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="7716f64e-080a-4014-8f95-bfe76df4b41c" x="507" y="305" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ESTADO_CIVIL}.equals("4")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="61ba59b4-9f82-49b5-98e8-e3ebbca8fc10" x="576" y="305" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ESTADO_CIVIL}.equals("3")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="fdaa66de-6e1b-42b3-b435-95c248d3f671" x="191" y="287" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NIVEL_ESTUDIOS}.equals("5")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="e87ed878-6a79-46b0-8ebd-e85b8fad0e5a" x="284" y="288" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NIVEL_ESTUDIOS}.equals("3")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="24e51e4b-036b-470a-9a35-8e2e093eab7f" x="60" y="303" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NIVEL_ESTUDIOS}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="cb664436-98ff-484f-9605-28802bfe2692" x="377" y="288" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NIVEL_ESTUDIOS}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="b7b61c43-a09c-4054-aa89-dcfde0dac2b5" x="103" y="355" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_VIVIENDA}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="fb260f52-5a4f-4a51-9297-aa86105de167" x="61" y="288" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NIVEL_ESTUDIOS}.equals("6")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="736592ca-df03-4a99-8214-53893368ac25" x="12" y="357" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_VIVIENDA}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="dc6ecf59-7396-4d19-a47f-143968f7564a" x="12" y="375" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_VIVIENDA}.equals("4")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="ff95420a-47a6-43d1-b43b-303205a83742" x="77" y="375" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_VIVIENDA}.equals("3")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="e2235fc9-1761-4b21-a7ae-ea40aec61e71" x="142" y="375" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_VIVIENDA}.equals("5")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="d8840054-b75d-4fe0-9bf0-99143b16e126" x="525" y="451" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{DECLARA_RENTA}.equals("true")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="2f3e0e52-411d-4105-ab92-ced1f0db261c" x="598" y="451" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{DECLARA_RENTA}.equals("false")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="e3d0ce77-b960-4e03-a762-5de7759f8f65" x="614" y="448" width="18" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="c0c4005c-cc9f-4228-9042-70bec64e576f" x="8" y="414" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("8")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="bfce3a54-2bfc-499c-9003-1e445d42ac9d" x="119" y="413" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("9")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="7e319ac4-e64c-434c-8258-bebaeb6d3244" x="21" y="412" width="98" height="15"/>
+				<textElement/>
+				<text><![CDATA[Empleado Informal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="132cee33-68c1-4757-be94-9497e2ef7546" x="132" y="411" width="111" height="15"/>
+				<textElement/>
+				<text><![CDATA[Empleado Doméstico ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3c79015c-b5dc-42f8-a8a2-525193cdd190" x="261" y="411" width="82" height="15"/>
+				<textElement/>
+				<text><![CDATA[Rentista Capital]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="d75d5b2b-0afe-4b61-9a5a-c10ff390d8d8" x="247" y="416" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("10")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="f8d98701-07fc-4a39-a59c-4286b8310ab3" x="361" y="411" width="134" height="15"/>
+				<textElement/>
+				<text><![CDATA[Independiente Profesional
+                                                                               __ Formalizado  __Independiente Agro]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="973e244f-eb13-4bf8-a6f1-d750c1c5813d" x="347" y="415" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="f8074507-3102-4ea4-88ba-19601c9a6a99" x="513" y="412" width="118" height="15"/>
+				<textElement/>
+				<text><![CDATA[Independiente Informal
+                                                                               __ Formalizado  __Independiente Agro]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="af48aef5-cf96-4f67-875d-718dd334aeb3" x="499" y="416" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("15")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="42de9504-44fc-4421-a2c7-3654d8e04840" x="643" y="415" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("14")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="3ee2c6f6-7978-4cf1-a2d9-1acb527d6bdc" x="223" y="866" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{MANEJA_CUENTA_EXT}.equals("true")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="4895cdf5-587a-4138-95c6-c1cc2f1bdeb5" x="262" y="866" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{MANEJA_CUENTA_EXT}.equals("false")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="70d567cd-bc10-4061-9243-f5f3608d5ffe" x="239" y="865" width="15" height="15"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="18f0e1a2-34f1-47d6-893a-f1018132e0fc" x="277" y="864" width="20" height="15"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5d443244-00de-43e9-91a1-7f6f2903a857" x="629" y="395" width="103" height="15"/>
+				<textElement/>
+				<text><![CDATA[Jubilado/Pensionado  ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="53bdb3ce-dfd2-4bd0-8152-5e5acfb9720f" x="134" y="398" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="330b431a-4e7b-4b56-8ca1-41ebc751c713" x="225" y="399" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("3")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="f510a784-1af5-4e13-8edb-32f988021f1d" x="235" y="396" width="102" height="15"/>
+				<textElement/>
+				<text><![CDATA[Trabajador Asociado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0ebf55aa-516c-48bb-92ab-2f975591d2e9" x="369" y="396" width="67" height="15"/>
+				<textElement/>
+				<text><![CDATA[Estudiante]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="e545704e-e979-4618-a828-386e693e998c" x="357" y="398" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("6")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="57610d3c-4f8b-4494-8408-85afc1eaa1f0" x="444" y="399" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("11")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="1d0a7323-a46c-498d-94d8-590339a16fe2" x="511" y="399" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("5")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="3553804c-aee4-4a7d-ba6b-efbad91b891d" x="459" y="396" width="36" height="15"/>
+				<textElement/>
+				<text><![CDATA[Menor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0a1b6d17-a6a1-4b38-8349-5829719abea2" x="525" y="394" width="65" height="15"/>
+				<textElement/>
+				<text><![CDATA[Ama de casa ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="82d01b5a-70d5-4ee8-bbaa-f651bcb83a2b" x="614" y="398" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("4")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="c8d27b63-4517-4ffa-82c9-430c54821910" x="384" y="428" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACTIVIDAD_LABORAL}.equals("13")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="a1183bdd-5a5b-4986-b04f-42308c1f207e" x="300" y="425" width="78" height="15"/>
+				<textElement/>
+				<text><![CDATA[Formalizado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9e539c05-a37a-48df-a288-e36c80a2091a" x="400" y="425" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Independiente Agro
+                                                                               __ Formalizado  __Independiente Agro]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="8e6ff2f7-b7c8-4e74-ad4b-94d5ed9d2c18" x="233" y="885" width="200" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="208ebca9-2cf9-422c-ab68-a71d6d683b00" x="432" y="885" width="162" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="968ba602-3c23-4a24-a4c6-a08f658e7161" x="594" y="884" width="397" height="60"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="6d402fba-1040-48a6-ba53-a8b0533fb99f" x="33" y="915" width="200" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="53c463af-1bf4-4bba-baeb-77b9eba053f4" x="233" y="915" width="199" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="8a9e0eb5-563e-4c55-82ea-ce693b8993a4" x="432" y="915" width="162" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="3d4bdad3-40d6-439c-a9c1-64846747f9dd" x="594" y="855" width="397" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="6a2615d5-e311-4307-bbe3-64eaaa4292b5" x="599" y="861" width="256" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[¿Realiza operaciones en moneda extranjera?   ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="d0dae6a1-fc2f-40b0-9398-456d646c9dba" x="880" y="865" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{OPERACIONES_EXT}.equals("true")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="57187c2b-1cf4-4d03-8b0c-4f996fff089f" x="898" y="862" width="15" height="15"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="962a1f21-e93a-4050-b8c0-b0c4fcd7d9e7" x="930" y="866" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{OPERACIONES_EXT}.equals("false")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="4a8bb447-ff15-4f13-9ce4-2040005fd054" x="948" y="862" width="24" height="15"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="05b86175-f77f-40e8-9f96-b34380725d0c" x="238" y="887" width="70" height="13"/>
+				<textElement/>
+				<text><![CDATA[N° de Cuenta:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d80c5aec-7600-45dd-8014-425769b1c9e6" x="436" y="887" width="46" height="15"/>
+				<textElement/>
+				<text><![CDATA[Monto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="889e9f03-b38b-49f2-a032-86622c99c505" x="435" y="917" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Tipo de Producto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="29e2f586-6d88-490b-a551-7053adfb3b59" x="36" y="916" width="42" height="15"/>
+				<textElement/>
+				<text><![CDATA[Ciudad:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f9197911-c29e-47ae-ac3d-7e5bce105305" x="237" y="916" width="37" height="15"/>
+				<textElement/>
+				<text><![CDATA[País:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="193c50c7-db39-4a44-a749-5ad5e9c47f4d" x="598" y="887" width="142" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIPO DE OPERACIÓN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="498fd536-6559-4746-886d-9be98d5c9d5c" x="617" y="902" width="72" height="15"/>
+				<textElement/>
+				<text><![CDATA[Importaciones ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="6af4c308-ee5d-4064-ba59-4c0fa02647fe" x="38" y="618" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_CONTRATO}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="25446c32-ab0a-495c-8137-d543b8329f38" x="53" y="618" width="58" height="15"/>
+				<textElement/>
+				<text><![CDATA[Indefinido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e22f094a-31ec-433e-9521-5643d1676700" x="38" y="985" width="169" height="15"/>
+				<textElement/>
+				<text><![CDATA[Ingresos principales                        ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="fe055ae9-ec6f-40f9-ab0b-016def8f6b57" x="118" y="617" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_CONTRATO}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="deebb4fb-d607-4117-841e-47c025e806b5" x="37" y="639" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_CONTRATO}.equals("")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="0f532d7b-80b1-4c7c-8bfa-173b826a20ff" x="475" y="717" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{SECTOR}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="8323c7f2-f9fa-49cb-8ac9-9c3302a5311e" x="53" y="639" width="65" height="15"/>
+				<textElement/>
+				<text><![CDATA[Otro. Cuál?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="73f88554-5bda-4b1b-9ecc-d853b38e2558" x="862" y="714" width="60" height="15"/>
+				<textElement/>
+				<text><![CDATA[Transportar ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="09b4f5d3-36c8-4d10-942c-31304f7fe7c6" x="538" y="717" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{SECTOR}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="0be42ae3-5448-4108-8daf-18ebe3f8a8c6" x="551" y="715" width="32" height="15"/>
+				<textElement/>
+				<text><![CDATA[Criar ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="96c11c34-9161-4a3e-b109-681e2a71ded2" x="590" y="717" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{SECTOR}.equals("3")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="94329886-4573-4188-9f81-3cf8a98c090a" x="603" y="716" width="49" height="15"/>
+				<textElement/>
+				<text><![CDATA[Servicios]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="f44c5bc1-eab1-4bd7-9974-8016e92c8741" x="663" y="718" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{SECTOR}.equals("4")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="d634f81f-a58a-4a1c-bbe4-843680ad0633" x="674" y="716" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Fabricar, transformar ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="450ba258-6889-40c2-9002-e8b5e3dc1a9d" x="786" y="717" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{SECTOR}.equals("5")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="21dc578c-eb9f-4818-bc90-ef3c6bfee325" x="797" y="715" width="52" height="15"/>
+				<textElement/>
+				<text><![CDATA[Construir]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="a162daaa-2ed3-444a-957f-9d80cd188a73" x="850" y="718" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{SECTOR}.equals("6")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="70b536a5-35a0-4956-ab9a-5b7601e53991" x="945" y="714" width="41" height="15"/>
+				<textElement/>
+				<text><![CDATA[Vender]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="b23fe379-69f6-4d63-99d7-03567fd42982" x="933" y="715" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{SECTOR}.equals("7")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="d3097c06-5201-4d70-8684-52443e2d70a2" x="604" y="905" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_OPERACION}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="5b2f613b-96ab-4ffe-9f79-c71ed91f3f63" x="398" y="524" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{DIRECCION_CORRESP}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="17fdd9f2-c3ff-444f-86c8-2a443a8bccb5" x="495" y="522" width="91" height="15"/>
+				<textElement/>
+				<text><![CDATA[Lugar de Trabajo]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="71cb87e0-a4df-4335-9d33-c11a45f8ca05" x="481" y="524" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{DIRECCION_CORRESP}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement uuid="ee293000-77b4-4fc9-8914-6d5a0cbaf53e" x="32" y="1000" width="321" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5c96d871-88c7-47e7-bc79-7d05c919c57f" x="32" y="1020" width="321" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="be31b0dd-81cb-4a31-9baa-bee6b55251a7" x="32" y="1054" width="321" height="26"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="c128489b-bdbf-44ff-8fb8-4f003a08e52e" x="37" y="1005" width="175" height="15"/>
+				<textElement/>
+				<text><![CDATA[Ingresos familiares                                 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="584347fa-ce0f-496f-a75b-563b7758a929" x="38" y="1028" width="133" height="30"/>
+				<textElement/>
+				<text><![CDATA[Otros ingresos permanentes
+demostrables]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ee9067c2-628a-4901-81cc-9ea64f566641" x="39" y="1060" width="162" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL DE INGRESOS                  ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="a8954dc4-33a8-4777-89e7-a5033f5284b9" x="32" y="1080" width="478" height="15" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="08d2f1c8-40fd-41da-93ba-fb61d45042a9" x="510" y="1080" width="481" height="15" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="b11a6a05-8045-4165-b995-dc8f779561a8" x="32" y="1095" width="478" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="629be376-de0b-4d74-b372-e4251e051860" x="36" y="1100" width="200" height="30"/>
+				<textElement/>
+				<text><![CDATA[Ahorro, Inversiones, Cuentas por Cobrar, Inventarios]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2bc3582f-7070-413a-a8a7-409447f0fc2f" x="510" y="1095" width="481" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="55c048e2-fb9b-43ab-ace4-04d8359e4c30" x="144" y="964" width="133" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ingresos mensuales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="495db60e-974b-49fe-b7e7-dbbeacb1f5c7" x="254" y="1081" width="57" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ACTIVOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="38e86cb8-0e01-45ed-999e-c137568dec9f" x="398" y="965" width="247" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción de otros ingresos mensuales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="848f1f7b-8df7-4591-9a4c-c5b13b476148" x="779" y="965" width="125" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Egresos mensuales]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="f3cdadfc-2189-4e21-8dee-ebcbb3ee561d" x="32" y="1125" width="478" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="081f6f2e-c46e-4190-b431-802eb8e1342c" x="745" y="1080" width="57" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PASIVOS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="1ae3f76b-fd69-498a-bd13-ea291cb523e8" x="673" y="979" width="317" height="21"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="366f0467-dca7-4d21-a20c-aeafaa71205a" x="673" y="1040" width="318" height="40"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="0c836035-54bb-416a-93b9-64d7412b7802" x="678" y="986" width="118" height="15"/>
+				<textElement/>
+				<text><![CDATA[Gastos mensuales:        ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="70011d54-e591-43f8-9f34-a7c5d1af5fcd" x="678" y="1013" width="118" height="15"/>
+				<textElement/>
+				<text><![CDATA[Otros egresos:               ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="90bbabf2-1f5c-4427-88d0-97fe6242cfad" x="677" y="1054" width="127" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL DE EGRESOS          ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a9e8e194-5227-4000-bc9c-14ef957d3fa7" x="373" y="986" width="100" height="88"/>
+				<textElement/>
+				<text><![CDATA[
+__Honorarios
+__Comisiones
+__Arriendos
+__Utilidad Negocio
+__Bonificaciones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="43d95dd3-8c4a-49e1-bf9d-09710aed959c" x="525" y="986" width="140" height="79"/>
+				<textElement/>
+				<text><![CDATA[__Pensión
+__Dividendos
+__Rendimientos                                                              Financieros
+__Giros del Exterior
+__Ingresos Familiares]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bd594abd-3418-4191-b8cf-100bb34b4bed" x="35" y="1131" width="288" height="15"/>
+				<textElement/>
+				<text><![CDATA[Vehículo, Propiedad, Equipo de Oficina, Maquinaria         ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="7c606bce-7e3d-46f1-b569-22ac19fddcbb" x="32" y="1165" width="478" height="26"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="93f199f2-25b6-4972-b9d4-39a6d9f68f5c" x="37" y="1171" width="283" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL ACTIVOS                                                             ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aa70ea4b-b9b9-414b-936e-ef45c1db7323" x="36" y="1151" width="287" height="15"/>
+				<textElement/>
+				<text><![CDATA[Otros ¿Cuáles?                                                                     ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="29c8838f-6e6d-4c3f-900f-1cc7f65c5193" x="2" y="1194" width="27" height="160"/>
+				<imageExpression><![CDATA[$P{IMG_REFERENCIAS}]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement uuid="7034fb5d-7b03-4ef6-b794-f56ed3f33312" x="510" y="1145" width="481" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="07f849c2-c321-491a-b0b1-357077af8189" x="510" y="1125" width="481" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="62f44800-008a-4a36-9d13-ba4cfb4c58b7" x="514" y="1170" width="202" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL PASIVOS                                    $       ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1283a2c8-f819-4d6b-9e21-011623704379" x="515" y="1106" width="206" height="15"/>
+				<textElement/>
+				<text><![CDATA[Deudas Financieras                                                                             ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2f5525e5-8423-4fd1-9572-12c7d289cfcb" x="31" y="1191" width="248" height="34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1df4bbde-66d3-491e-b75b-f19a7ed4625a" x="277" y="1191" width="391" height="34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="788e1e8e-031a-48bf-83eb-7855e51fffbd" x="668" y="1191" width="161" height="34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="3f1622b6-91b8-4a90-bb8a-75c14f314e59" x="156" y="1225" width="512" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2c99044d-8ca6-4458-b370-80e0dc19314e" x="829" y="1191" width="162" height="34"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="12fd2ec4-6b24-4722-863e-93e16fe058a5" x="668" y="1225" width="161" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="fdafc97a-5904-43eb-978f-1abba8d4f36f" x="829" y="1225" width="162" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="768379b7-e092-41a5-b8de-3e6609772a84" x="31" y="1225" width="125" height="40"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5b18e87c-868c-4666-b87b-a61bfdcf6552" x="31" y="1294" width="125" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="70a828dd-ca4a-43b4-a1ab-a03fc2b33b69" x="31" y="1324" width="125" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="bfc45e70-587c-434c-9129-46b428f844eb" x="515" y="1129" width="204" height="15"/>
+				<textElement/>
+				<text><![CDATA[Deudas con Terceros                                          ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9d587849-ed39-4678-9de3-e72960ecf470" x="515" y="1149" width="203" height="15"/>
+				<textElement/>
+				<text><![CDATA[Otros ¿Cuáles?                                          ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="878d86fa-2207-4825-898d-c7646b9363bd" x="673" y="1193" width="55" height="15"/>
+				<textElement/>
+				<text><![CDATA[Parentesco]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4b15d706-a08e-448d-aec3-8e487efcc0cd" x="143" y="113" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NRO_ASESORIA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d40fccc3-d367-4ed4-81b1-89cefc1b811d" x="672" y="1227" width="56" height="15"/>
+				<textElement/>
+				<text><![CDATA[Parentesco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e89bcdcc-5beb-46d5-81ab-72dd1e8453a3" x="832" y="1194" width="52" height="15"/>
+				<textElement/>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="290c958d-83b7-4d74-9e50-b62b34e8254b" x="833" y="1227" width="51" height="15"/>
+				<textElement/>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="07d20a85-4a8a-4081-92b5-2c19aad0ddc9" x="106" y="212" width="134" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{APELLIDO1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d3c58e25-ca10-43ca-9741-0ec74bee8409" x="284" y="1194" width="150" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nombres y apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7b17fa8e-95f0-4cdf-9ef9-0328d1f22930" x="35" y="1330" width="89" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comerciales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1e6a9ffd-d56e-4fc5-b7f7-f813a792f9b7" x="36" y="1302" width="87" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Financieras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="039937fc-01a7-477d-a174-cd59e1809266" x="36" y="1272" width="87" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Personal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61cfc456-5591-47fa-985a-59b2d689b26a" x="35" y="1193" width="238" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[¿Tiene familiares directivos o empleados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="95b80679-a316-4867-bf15-85d7a0729746" x="34" y="1238" width="116" height="15"/>
+				<textElement/>
+				<text><![CDATA[(Que no viva con usted)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="72b3c668-4f55-4d8a-a668-7a786e8961cc" x="42" y="1208" width="147" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[que trabajen en Confiar?]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="e3f1c1b7-5818-4106-a1aa-386f04895026" x="241" y="1212" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{FAMILIAR_TRABAJA_CONFIAR}.equals("false")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="98594e14-b1b3-4cd0-a066-40ce2145ada4" x="256" y="1209" width="23" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="907aec2f-09b0-4cc9-8144-e719be3e9867" x="213" y="1210" width="15" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="bf2b78dd-cee5-4b61-8b3b-92a428df1bfb" x="195" y="1213" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{FAMILIAR_TRABAJA_CONFIAR}.equals("true")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="1d517a6e-77b9-4cc3-8cc2-8634f56e520c" x="37" y="1227" width="65" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Familiar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b228c980-d0bf-4812-b471-f8933172f496" x="161" y="1227" width="124" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nombres y apellidos]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="290752b1-d359-41a8-a44c-217fabcaf926" x="156" y="1245" width="354" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="0a4eec70-1a9c-4800-a18e-43cc66c1e03d" x="507" y="1245" width="484" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="84e72865-f147-4320-afdd-e2feb660c07c" x="160" y="1247" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Ciudad (municipio)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f8fc74bf-45de-42cd-95d3-1e3f04766ad2" x="511" y="1246" width="46" height="15"/>
+				<textElement/>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="263210b3-d387-43f9-a363-e39211618d9f" x="156" y="1265" width="246" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="97857cbb-21f5-43ca-97b0-12928e335f4a" x="156" y="1294" width="180" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f5fb1581-e51d-4bcd-ae58-9949ade391c7" x="402" y="1265" width="201" height="29"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="680a3174-a7ec-4e9a-93e1-1bd8f7242536" x="160" y="1267" width="150" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nombres y apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c8111df5-37d6-4d32-baab-f73dd731c086" x="160" y="1295" width="48" height="15"/>
+				<textElement/>
+				<text><![CDATA[Entidad]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="6c9e7d0d-5401-4bc8-b02e-a4da38ba378b" x="336" y="1294" width="437" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="1b5881e9-38be-40d6-9615-37688437f8a2" x="407" y="1266" width="46" height="15"/>
+				<textElement/>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="392c2d51-5843-4d7e-97e2-5e5737174570" x="341" y="1296" width="48" height="15"/>
+				<textElement/>
+				<text><![CDATA[Producto]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="365278ae-034c-4249-888d-a326ab3d6868" x="773" y="1294" width="218" height="30" backcolor="#C0C0C0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="81cb040a-1ffa-4ff0-a4bc-ff4271ecc1ff" x="599" y="1265" width="201" height="29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="ee433d82-ac11-471a-9c71-606e611bdedc" x="800" y="1265" width="191" height="29"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="16cae03f-9387-4a76-b736-9a9987286bc9" x="804" y="1267" width="45" height="15"/>
+				<textElement/>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5972a7ad-e865-46f8-b00c-d59be44c8a78" x="603" y="1267" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Ciudad (municipio)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="3d09b36c-034a-448c-a6e2-97e33ca941ec" x="156" y="1324" width="617" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="77cd4e4f-324c-45d1-b24a-e3fbe592e81b" x="773" y="1324" width="218" height="30" backcolor="#C0C0C0"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="4451e959-5b76-4086-94f2-aa17a329aa96" x="159" y="1325" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Establecimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4c489d12-700b-44e0-8db9-1f35ccc42d2f" x="777" y="1295" width="177" height="29"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Marque "X" en caso de no tener
+referencias en el sector financiero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0349feb7-8ddc-4db3-8ebc-2c7f9db1b800" x="776" y="1325" width="177" height="29"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Marque "X" en caso de no tener
+relaciones comerciales]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="c5abfe90-ef4f-4722-b750-37f220af345d" x="17" y="247" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_DOCUMENTO}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="ed04ea79-ec3e-49b1-bbea-ddf3aeb5ce3f" x="27" y="246" width="22" height="15"/>
+				<textElement/>
+				<text><![CDATA[ CC]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="9c8a0a89-d15a-4bf0-adca-8e54e4bb9740" x="77" y="248" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_DOCUMENTO}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="3e9772db-e22d-48c3-989e-5d76a3749e49" x="88" y="245" width="20" height="15"/>
+				<textElement/>
+				<text><![CDATA[CE]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b64ad05a-6d8d-4a1d-a9bf-2313cc1848bc" x="139" y="247" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NRO_DOCUMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f7479ff3-b80a-4e9d-ab4b-e5fa8dc616f7" x="257" y="246" width="118" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{FECHA_EXP_DOC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ac65b5b2-d359-4c01-91eb-bbe29e027152" x="529" y="245" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{CIUDAD_NAC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="944915a3-3cf4-4486-939f-6b2343303c6b" x="394" y="245" width="117" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{CIUDAD_EXP_DOC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c32b33fd-0919-42d6-8182-0f40a94be09b" x="665" y="247" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NACIONALIDAD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a68185b6-101a-420b-a871-ef4a37466de1" x="845" y="247" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{FECHA_NAC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b80bb2a0-1069-4df2-8faf-6fbe97b8d485" x="813" y="268" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NRO_HIJOS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="aeaf642e-2bff-45e1-bcf0-43b7729caa25" x="140" y="316" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TITULO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3dddd78f-6ad4-4aa3-8c8c-02d69ad098c8" x="197" y="372" width="41" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{ESTRATO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="08cede0d-03b3-47eb-8911-e4729f717370" x="36" y="487" width="183" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{DIRECCION_RES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f7f13948-a8ee-414d-839f-1340d58abb4e" x="599" y="523" width="378" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{EMAIL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c6c7f2bd-6250-44bc-b042-ff99e715766b" x="161" y="522" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{CELULAR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c7b86e8b-4c0d-4edc-a06a-e449abf6b4bf" x="355" y="486" width="250" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BARRIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ab30992d-05f6-41fb-b7df-ccd3274b6d3b" x="738" y="488" width="124" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{DEPARTAMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f265d415-09dc-4107-9cac-32796609489e" x="622" y="486" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{MUNICIPIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3ecab56b-8e36-4e3f-8aae-9da53eb3b677" x="723" y="316" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{PERSONAS_CARGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fc723fc0-11fd-40a1-b961-16addca4f744" x="250" y="375" width="439" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NOMBRE_ARRENDADOR}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="fce2242c-1ed2-4712-893b-d830bb4068e5" x="814" y="423" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{MANEJA_REC_PUB}.equals("true")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="61397ab0-6329-43fb-9ceb-3bd825057a75" x="893" y="420" width="18" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e80320ac-bdab-4b63-9bb3-f6a251a3607d" x="831" y="420" width="13" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="229432da-8723-4cec-aaf6-e8c493b77a7c" x="877" y="423" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{MANEJA_REC_PUB}.equals("false")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="9f64e942-378f-468d-b5a3-8f43549f5d10" x="725" y="371" width="168" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TELEFONO_ARRENDADOR}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="6377e565-e33f-45bc-8d29-0ff4ae911e58" x="707" y="904" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_OPERACION}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="5a35624e-54d1-4819-bb18-e7f791d06164" x="719" y="902" width="72" height="15"/>
+				<textElement/>
+				<text><![CDATA[Exportaciones ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a6f91db5-7d95-4115-8863-4a4007f48bab" x="827" y="902" width="55" height="15"/>
+				<textElement/>
+				<text><![CDATA[Inversiones ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="4c8b0e51-3e6b-46ad-8748-7c28ea99377d" x="906" y="903" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_OPERACION}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="5c9a6964-a0f5-4f51-bcbc-71969278bd3f" x="814" y="904" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_OPERACION}.equals("3")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="743f62e6-e127-462f-9008-499334073f8b" x="919" y="901" width="55" height="15"/>
+				<textElement/>
+				<text><![CDATA[Prestamos]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="78fe0fc7-7638-425b-93a6-3b6bf55e989d" x="605" y="922" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIPO_OPERACION}.equals("5")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="528d123d-8705-443a-a6fa-f933a17cba2c" x="622" y="921" width="76" height="15"/>
+				<textElement/>
+				<text><![CDATA[Otros. Cuales?]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="4e7daae2-27cd-47f2-bb84-f902c755ea66" x="322" y="710" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{UBICACION_PUE_TRA}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="be0f633e-0fe9-460f-a33b-b3c928b65b3e" x="202" y="710" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{UBICACION_PUE_TRA}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="e573ae08-a0a7-48b6-80c4-d5a18371e862" x="334" y="708" width="50" height="15"/>
+				<textElement/>
+				<text><![CDATA[En obra   ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="7f674815-9e9f-48ec-93ba-3bcf3ebd6581" x="41" y="723" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{UBICACION_PUE_TRA}.equals("3")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="be05ad4c-07af-45af-be53-8d0ea7fd616a" x="372" y="211" width="144" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{APELLIDO2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9c6633c8-6303-4879-a22e-47ac311f5f10" x="634" y="212" width="319" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NOMBRES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7d61079f-2baf-4d57-9b59-0aeb1d592f33" x="175" y="613" width="389" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{CARGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="57e7cd8f-2714-40a4-8736-5c106c56d3f5" x="37" y="522" width="113" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TELEFONO_RES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3abe1aaa-fe81-4437-a7c2-3285e4bde09a" x="37" y="558" width="300" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{DIRECCION_TRABAJO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6f8ec7c3-aa5e-42eb-86b7-fc2d10e6f69d" x="514" y="559" width="121" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{DEPTO_EMPRESA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0b21a24a-c9d9-4703-add7-5f1ce9c7c083" x="382" y="639" width="467" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NOMBRE_EMPRESA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9aedd178-446d-47e0-95ed-222e80cda25d" x="706" y="559" width="139" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TELEFONO_EMP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1beef1b8-5024-4ab9-95b4-ee5a6e83eaca" x="604" y="614" width="121" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TELEFONO_EMP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="95e5fe10-e8bf-42d2-9afc-fac148e6ebb4" x="758" y="613" width="135" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{FECHA_INGRESO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f576309c-724d-441a-b164-71eef16c2cb1" x="349" y="1172" width="129" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TOTAL_ACTIVOS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="26ecc2e7-291d-4952-9ef3-d6c4d2bef65f" x="735" y="1173" width="127" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TOTAL_PASIVOS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b0547391-524d-4ac5-861a-5ec867a7cfd5" x="292" y="1250" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REF_FAM_CIU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5018bd02-4305-4047-892d-7e9b4ba27d0e" x="605" y="1281" width="181" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REF_PER_CIU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0d88ee7d-dc6f-4754-abaf-4f5f85d553c0" x="161" y="1281" width="223" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REF-PER_NOM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="49ffd841-df78-469a-ac0d-e78ca3690e46" x="292" y="1228" width="284" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REF_FAM_NOM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="51a32897-62db-40ac-a22e-809ebfa0612b" x="285" y="1209" width="173" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NOMBRE_FAM_CONFIAR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f4ce22bc-0a6d-423e-8574-3d5abb94abb1" x="725" y="1107" width="8" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9b1a0e00-23fc-460c-9048-bbc2e1fa7395" x="737" y="1129" width="152" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{DEUDAS_TERCEROS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2de15074-9d6b-461f-bbf2-ff098be75ea7" x="738" y="1107" width="166" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{DEUDAS_FINANCIERAS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8e5065c5-e56a-4704-af42-96bb628267d3" x="38" y="900" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TIPO_MONEDA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="663439ab-9c07-400d-a74a-9be628781bd0" x="819" y="1054" width="144" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TOTAL_EGRESOS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="12c596ce-3930-4df0-bae6-f74165b42cfc" x="819" y="1015" width="126" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{OTROS_GASTOS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ee55a962-8f09-40f3-a362-74d3d9e32f10" x="348" y="1107" width="160" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{AHORROS_INVERSIONES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d00c7cb1-9612-4bf7-ae05-07f11475515c" x="347" y="1130" width="151" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{VEHICULO_PROPIEDADES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="23ad306b-20d7-4f74-88b0-99aa909c5ec5" x="214" y="1035" width="15" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="7b4de63d-f928-4fa4-9d4e-7e833f245f92" x="228" y="1061" width="119" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TOTAL_INGRESOS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="044cb1a3-ace4-4394-96aa-48a4ce0e9349" x="230" y="1004" width="116" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TOTAL_ING_FAM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="adb91e0d-780e-4709-9610-331f34148d9b" x="238" y="899" width="141" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NO_CUENTA_EXT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="08473810-e2ef-4996-9990-b828bffa9ad6" x="180" y="447" width="173" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[($P{REGIMEN_SOCIAL}.equals("1")?"No":"Si")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3ffecd1e-d788-42d6-8ab9-1d8689ff4c80" x="358" y="559" width="142" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{MUNI_EMPRESA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="45df5575-8300-4add-9169-993b4138615c" x="36" y="929" width="190" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{CIU_CUENTA_EXT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6a1af1a2-2d0d-455b-97b2-f39ee77f1d18" x="237" y="929" width="189" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{PAIS_CUENTA_EXT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0bd67c04-ff5d-4ee7-a98f-88e1bc332a91" x="442" y="768" width="33" height="15"/>
+				<textElement/>
+				<text><![CDATA[Propio]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="4067b29b-b50d-46ee-a6c2-a4486b387bee" x="426" y="770" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIP_LOCAL_NEG}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="786792be-f20f-4638-ae41-5132386c97f2" x="485" y="770" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIP_LOCAL_NEG}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="b9c4e824-57a4-4054-bf3d-6349499dd80c" x="609" y="769" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIP_LOCAL_NEG}.equals("4")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="c4e0ff0e-c610-469c-addb-6996032d9cd3" x="699" y="769" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIP_LOCAL_NEG}.equals("3")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="5e287139-9e76-4341-b2de-a18ca2a27b2a" x="498" y="768" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Arrendado individual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="103f7466-12c3-4ea7-8935-8179bb5af2d3" x="624" y="768" width="65" height="15"/>
+				<textElement/>
+				<text><![CDATA[Amortización]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="12dda864-65ce-4bbc-bf61-906abf59a323" x="716" y="768" width="103" height="15"/>
+				<textElement/>
+				<text><![CDATA[Arriendo compartido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bf2d43d2-ee55-468b-abc1-69876c269657" x="304" y="864" width="43" height="15"/>
+				<textElement/>
+				<text><![CDATA[Entidad:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="aaf12ea5-717a-4ba9-8e81-8a02b21d7f49" x="355" y="864" width="222" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{ENTIDAD_EXT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="09a9a291-03e1-4507-9d16-d3e0bc7346d4" x="732" y="1194" width="95" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{PAR_FAM_CONFIAR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="177b0561-e81a-4def-8d8e-6664d847c401" x="887" y="1194" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TEL_FAM_CONFIAR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e287ac48-1387-4ba8-a47e-a288164b986f" x="731" y="1227" width="98" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REF_FAM_PAR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="09902247-fea5-4981-b90c-8567043d891f" x="887" y="1227" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REF_FAM_TEL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2ba9fda0-d807-4064-8e4a-5dddab71d3fd" x="806" y="1279" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REF_PER_TEL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="253e45af-0a9b-493a-aae4-feac643e97cf" x="160" y="1339" width="276" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REF_COM_ENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3c1fda1d-38a1-4861-ac56-841b50305e61" x="161" y="1310" width="171" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REF_FIN_ENT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="beef7dbd-663d-40e0-b707-748d0d55058a" x="342" y="1310" width="232" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{REF_FIN_PRO}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="af754543-d584-4f51-a7cc-c8ac9fe54bbf" x="964" y="1302" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NO_TIENE_REF_FIN}.equals("true")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="b6677aa3-af7c-4557-971c-92c7c75f15b0" x="964" y="1333" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NO_TIENE_REF_COM}.equals("true")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="e4621ec0-453e-4c1c-8d09-6ee0c6f2bfcd" x="335" y="1107" width="7" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5dd87b9b-7ce0-4bab-b48a-648e2d9b5847" x="335" y="1130" width="7" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cd8ae36f-9122-44bb-83cf-f33fe69e79d4" x="334" y="1149" width="7" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1ca75a50-71bb-41d2-9232-fe90926b0c89" x="334" y="1171" width="7" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5cb87b25-ebcb-4f6b-bde9-d38d1cca422f" x="725" y="1129" width="8" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a5fb0069-1946-4194-83f6-1fe803218b73" x="725" y="1148" width="8" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="853f28ec-e616-4d69-a798-e4484978aee3" x="725" y="1173" width="8" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3d0fc89f-9bc9-466b-a33b-4ebf3a3f336d" x="216" y="985" width="7" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0064ed56-a38c-4357-82db-386813b3186b" x="216" y="1005" width="7" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="efbcd205-d691-49fd-b8d0-2f3fa92ed2be" x="214" y="1061" width="7" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="050fedbd-3ca7-40ab-be02-8631dfd36f0b" x="806" y="985" width="7" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="19130e4b-8a87-4fac-9b32-e12a5effb4a9" x="806" y="1015" width="7" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="832197d4-f103-4cbf-ac90-72bbe62a3265" x="806" y="1054" width="7" height="15"/>
+				<textElement/>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="9afb1e21-d354-45fe-ae8d-19e4a5591f7a" x="91" y="690" width="416" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{OCUPACION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4854909c-1dc4-4b49-bf69-0a654849ea80" x="560" y="689" width="121" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NUM_EMPLEADOS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5a72d9d0-eb08-4fb2-998c-ae6177ba16f0" x="951" y="800" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[($P{REGISTRA_COMERCIO}.equals(true)?"No":"Si")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="786015ce-3e0b-42ec-87c9-2ef879c5f9a6" x="951" y="820" width="34" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[($P{PAGA_COMERCIO}.equals(true)?"No":"Si")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="14c37a14-0adf-464c-9681-7143c8b06d35" x="841" y="775" width="121" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{MES_LOCAL_ACT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e0d2898f-0104-459a-9659-abd93383767c" x="673" y="1208" width="148" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{PAR_FAM_CONFIAR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9bd8bf75-9bd8-4afa-b34a-50b0ce43feb7" x="834" y="1208" width="123" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TEL_FAM_CONFIAR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0aa960aa-562e-4ec4-ba5c-468b7ca03be7" x="36" y="774" width="343" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NOMBRE_NEGOCIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="183f1e46-df66-43e5-ad3e-c6b314bfe6e3" x="36" y="823" width="161" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NOMBRE_DUENO_LOCAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="43cb8b11-6405-4d94-803c-a3e95187b49c" x="628" y="816" width="162" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TEL_DUENO_LOCAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1a82c8b8-fc7b-4bdb-8c49-7823195651cb" x="228" y="985" width="117" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{INGRESOS_PRINCIPALES}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="1440">
+			<rectangle>
+				<reportElement uuid="26772cf5-5e80-4295-9aac-33b81cdc7812" x="786" y="115" width="204" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="4aff1c7f-c705-4f4d-97db-7de41de01eff" x="619" y="115" width="167" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="aff9afa0-0713-4610-b04c-5b8fd7691e06" x="0" y="1284" width="739" height="105"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="97297c85-ccbd-494f-8df0-ac7cb1f8565b" x="0" y="1236" width="989" height="48"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="667dd9da-5cbb-48f0-a85d-e4988b58b5ef" x="0" y="1045" width="991" height="115"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="51411184-94fb-4773-9946-b92c1c4a8816" x="2" y="813" width="988" height="103"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f36a7aa6-4c85-4a78-b42e-602623481572" x="2" y="724" width="987" height="66"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1d828244-1d27-422c-9285-5a515d78c99d" x="1" y="490" width="989" height="211"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="b2917b68-4faa-43c1-9500-89d278c44924" x="2" y="196" width="988" height="20" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f567ebbc-b6d6-4849-b09b-e558be7c8011" x="1" y="216" width="989" height="36"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="33c29a9a-8de8-46d6-b57e-d030b7033434" x="23" y="0" width="966" height="20" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2d57ee70-3d3e-441f-970d-44d87f6d89c7" x="0" y="468" width="990" height="20" forecolor="#00CC00" backcolor="#008000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="42255f7d-6e73-4b3d-94a4-4ca449b089de" x="2" y="490" width="985" height="208"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Certifico que la información presentada en este formato y demás documentos corresponde a la realidad, no obstante autorizo saldar las cuentas o dar por terminado este contrato en caso de inconsistencias con su contenido, eximiendo a la Cooperativa Financiera CONFIAR de toda responsabilidad que se declare por información errónea, falsa o inexacta que yo hubiere proporcionado o por no hacer oportunamente la actualización de la información, por lo menos una vez al año.
+Autorizo en forma voluntaria a CONFIAR COOPERATIVA FINANCIERA para enviar mensajes GRATUITOS relativos a mis obligaciones crediticias y/o al manejo de tarjetas débito o crédito y demás operaciones relacionadas con dicha entidad, al terminal móvil de telecomunicaciones y/o a la dirección electrónica reportados como de mi uso o propiedad.
+ SI___        NO___
+En caso de no autorizarlo entiendo que estaré privándome de una medida que me ofrece CONFIAR tendiente a evitar fraudes con mis tarjetas. Asi mismo si acepto el envío de estos mensajes estaré atento a los mismos con el fin de solicitar el bloqueo de la tarjeta en forma oportuna de llegarse a presentar una situación  anormal, transacción o consulta no realizada por mi.
+
+Reporte anual costos: Este reporte describe los pagos consolidados que el cliente ha realizado a CONFIAR por los productos o servicios: ¿Como desea consultar y/o recibir su reporte anual de costos?
+       Consultarlo en la Agencia Virtual (Internet)
+       Recibirlo en la dirección de correspondencia.
+En caso de seleccionar dirección de correspondencia, el reporte será enviado a la dirección de facturación que el cliente tenga registrada.
+
+Acepto las condiciones generales que me fueron informadas por CONFIAR COOPERATIVA FINANCIERA para el manejo de canales por los cuales puedo realizar transacciones monetarias y no monetarias. SI___NO___. En caso de no aceptar, solicite diligenciar el formato F-GPS-0100
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c204b2f5-5c1a-4898-81a3-cda9f62d4f40" x="7" y="468" width="983" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECLARACIONES Y AUTORIZACIONES DEL CLIENTE O AUTORIZADO:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="5121b857-dd63-41d8-ac34-cd6bbd7d562c" x="0" y="393" width="989" height="20" forecolor="#CCCCCC" backcolor="#CCCCCC"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="cc04d557-4584-4148-a242-3ecbef6755f2" x="0" y="703" width="990" height="20" forecolor="#00CC00" backcolor="#008000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="48c3e528-c2b9-4503-8d52-c87d1a929844" x="19" y="703" width="949" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECLARACIÓN DE ORIGEN DE FONDOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4eae33e5-95e7-4ee5-9518-5797f5ba65c2" x="6" y="724" width="977" height="64"/>
+				<textElement/>
+				<text><![CDATA[Declaro que la información aquí contenida es veraz y verificable y autorizo a CONFIAR a validar la información y poder  cumplir con  los requerimientos legales
+Igualmente declaro:
+1-Que los recursos que entregue a CONFIAR a cualquier título provienen de actividades licitas consistentes en __________________________________
+2-Los bienes que poseo provienen de actividades lícitas.
+3-No permitiré que terceros efectúen depositos a mis cuentas con recursos provenientes de actividades ilícitas,  ni haré trasferencias a personas que se dediquen a  la realización   de  actividades ilegales.
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="ecd69b70-b08e-48d2-8057-73c702d06c93" x="2" y="792" width="990" height="20" forecolor="#00CC00" backcolor="#008000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="ebd2e4ed-e5b7-4a64-a1a3-5981b63684cd" x="423" y="792" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AUTORIZACIONES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e9496f20-7ecc-4cde-a35d-bc50a19a704e" x="7" y="815" width="980" height="102"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[1-Autorizo (amos)  permanente  a CONFIAR  o a sus cesionarios o a quien represente sus derechos para que solicite, informe, reporte, procese o divulgue a las Centrales de Información y Riesgo todo lo referente a mi comportamiento comercial y a las relaciones comerciales en los términos y condiciones que consagre la ley.
+2-Autorizo (amos)  a CONFIAR Cooperativa Financiera para que consulten información en cualquier clase de  entidad  pública o privada legalmente constituida, con el fin de que dicha entidad certifique la titularidad de bienes que se encuentren a mi  nombre.
+3-Autorizo (amos) para que los datos personales que aquí suministro, sean  utilizados con el fin de que me incluyan en la utilización de nuevos servicios y productos, realización de eventos y sorteos que realice CONFIAR. Esto para dar cumplimiento a las normas de protección de datos personales.
+4-Igualmente nos obligamos a cancelar el valor de las primas de seguro de vida y demás pólizasque estamos obligados y que serán canceladas conjuntamente con la amortización del crédito y por los valores establecidos en las respectivas pólizas y en las condiciones establecidas en la Ley.
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="b2d09503-d02a-4f08-b0dc-d6d91913fa67" x="1" y="917" width="990" height="20" forecolor="#00CC00" backcolor="#008000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="ba1b7191-8be9-4440-8151-815a1745e65c" x="9" y="916" width="949" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECLARACIÓN DE ASEGURABILIDAD (Sólo para créditos)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="aad3ccf8-4a21-44ba-bde1-6f5b39adeb7f" x="1" y="939" width="493" height="106"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="647f3702-d06b-46d7-b083-2fda813b822f" x="494" y="939" width="497" height="106"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="c9ca601e-a328-462f-bce4-cca5ec2b57a4" x="36" y="0" width="957" height="20" forecolor="#000000" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS GENERALES DEL CÓNYUGE O COMPAÑERO(A) PERMANENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ba0b3e34-cebf-4014-b7fc-e2cefa19aa9a" x="8" y="417" width="941" height="51"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Es mi decisión voluntaria cumplir los requisitos exigidos para hacerme Asociado de CONFIAR Cooperativa Financiera, por lo cual declaro mi adhesión al Acuerdo Cooperativo, los estatutos y demás normas que lo regulan.  Igualmente me comprometo a conocer, practicar y fomentar la Filosofía Cooperativa y pensamiento Solidario de Confiar y aceptar la responsabilidad que me corresponde como co-dueño de CONFIAR.
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="b29719f0-ff44-4941-a277-fd6e680d1969" x="32" y="20" width="166" height="35"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="8b316297-8041-4298-96d1-8ac2bac78373" x="40" y="21" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Primer Apellido]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="7ae4c7af-d023-4db3-b35d-5a589c67aa07" x="198" y="20" width="197" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c66efc80-a4b7-4c78-bc34-e544afa426fd" x="395" y="20" width="283" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e9eb1294-67be-4602-afcf-149f1cd09f01" x="678" y="20" width="111" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="db8e811f-a128-461e-9c88-65b4033d2bf5" x="786" y="20" width="204" height="35"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="41a7faf9-9f3f-4a74-bcb2-7b350dea044b" x="203" y="22" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Segundo Apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6b861d20-4e93-4af3-9282-3c68657b9fc0" x="400" y="22" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nombre completo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="91d6ac66-7125-4368-9854-45cc9050a05c" x="706" y="35" width="22" height="15"/>
+				<textElement/>
+				<text><![CDATA[ CC]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="f068e370-7373-45b9-9b0c-b26bfa199b47" x="698" y="37" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIP_DOC_CONYUGE}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="0488b438-76fc-4429-aec2-24d8700e3c8c" x="739" y="38" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{TIP_DOC_CONYUGE}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="70debd40-96e5-470a-96ab-bf1d33b50703" x="750" y="35" width="20" height="15"/>
+				<textElement/>
+				<text><![CDATA[CE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="eef3d42d-b5c8-4e07-bc5a-28e23d8ca730" x="791" y="20" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Número Doc:]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="2bf978d3-7217-47e9-ae59-5aa951cbd115" x="2" y="0" width="28" height="175"/>
+				<imageExpression><![CDATA[$P{IMG_REFERENCIAS2}]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement uuid="303a7cc7-1f02-4550-9ff2-43b80efaebe7" x="32" y="55" width="291" height="120"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="2cd261be-d0d0-4b6b-bf8b-856624a777ae" x="38" y="56" width="133" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ocupación principal:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="5233fc2d-b02d-4e22-99b0-7b7083906226" x="323" y="55" width="72" height="60"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="fbe04500-1af9-4ccf-954b-a10b5d7b454f" x="395" y="55" width="116" height="60"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="a9ce825f-e7b5-499b-8dfc-deee0d815d7f" x="400" y="57" width="115" height="15"/>
+				<textElement/>
+				<text><![CDATA[Fecha de nacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a0400636-a76a-4d1e-8bd7-b38dfcb59449" x="345" y="57" width="33" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexo]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="6c3f5155-2272-46c1-9c27-bd88a699c435" x="346" y="74" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{GENERO_CONYUGE}.equals("2")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="944d4531-519a-4a83-8454-d62b12199426" x="367" y="72" width="14" height="20"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[F]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aaac1a60-1efe-4aa6-bff4-85a81db1daa7" x="365" y="88" width="19" height="15"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="e50efd94-0161-4800-9d25-eb45df49509c" x="346" y="90" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{GENERO_CONYUGE}.equals("1")?$P{IMG_CHECKBOX_TRUE}:$P{IMG_CHECKBOX_FALSE})]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement uuid="afdff524-8c9e-4087-8856-c050b915cd4c" x="511" y="55" width="479" height="60"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="fd2e9d0f-2efe-4a51-8e62-c4a76ae4a2d0" x="516" y="57" width="133" height="15"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nivel de estudios:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="28bba118-7a40-401a-9bdf-2786b1f8cebf" x="2" y="176" width="989" height="20" forecolor="#00CC00" backcolor="#008000"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2ed02d5c-5225-4083-97db-6fa68e61ce44" x="323" y="115" width="296" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="9eb80c71-13b4-4df5-a25d-7cf054da184e" x="323" y="145" width="324" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="60d754c0-cef9-4a75-98fe-81c1dba89317" x="644" y="97" width="61" height="15"/>
+				<textElement/>
+				<text><![CDATA[Universitario ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9e1405a3-45be-4461-b328-3bdc7eb6060d" x="34" y="175" width="949" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SI USTED ES ASOCIADO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="3200a034-e986-418f-b9e9-830c81f4af73" x="645" y="145" width="125" height="30"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="4557b02c-fe0a-4dde-a384-98e3429324a0" x="770" y="145" width="220" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="66e92a49-fdbd-4c0b-bcb9-a8100297adb1" x="789" y="57" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Título obtenido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ea92f84d-69b7-4688-bd88-ed75352de8d5" x="9" y="237" width="352" height="15"/>
+				<textElement>
+					<font size="11" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[hermanos menores de 18 años con dependencia económica.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="58152726-04f8-468a-852a-eb0b055e2ffd" x="327" y="115" width="130" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nombre de la empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a0eaa7d0-42c8-415c-93a2-0316f77cab70" x="328" y="145" width="153" height="15"/>
+				<textElement/>
+				<text><![CDATA[Dirección del lugar de trabajo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c40999ec-43db-4f75-90d5-6159ee270f68" x="649" y="146" width="61" height="15"/>
+				<textElement/>
+				<text><![CDATA[Municipio]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="cf6521b5-ca50-4be8-a185-2779d85112a4" x="1" y="252" width="345" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f6cc95a4-60d0-4da1-a872-e72a6a9f6e50" x="1" y="287" width="345" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="04a23967-f39e-4a51-91d8-a7e1aa775299" x="346" y="252" width="183" height="35"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="4a4da693-ec6c-4c6e-b437-ec89f4a3858e" x="-1" y="196" width="973" height="20" forecolor="#000000" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESIGNACIÓN BENEFICIOS DE SERVICIOS QUE OFRECE LA COOPERATIVA (Solamente para vinculación como Asociado)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c435a2bc-e591-45c4-83aa-820a2aab7b52" x="47" y="395" width="926" height="20" forecolor="#000000" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADHESION AL ACTO COOPERATIVO EN LA VINCULACION DE ASOCIADOS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="e8b4863d-337e-4f9f-8cb3-c39dd4ed1905" x="1" y="322" width="345" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="76ec1318-df72-4df9-bb2c-3c5d5a27e5d8" x="346" y="287" width="183" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c4b28cf3-fd58-4476-a3df-22e8cc758ccb" x="346" y="322" width="183" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="4b00d18f-d64e-40ee-b6c4-a4075f0cb693" x="1" y="357" width="345" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="77a87343-3f49-4497-9621-bcc841c349fd" x="346" y="357" width="183" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c026d5c9-de18-49f8-a0f8-3c4c4e377a73" x="529" y="252" width="142" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="aefe6a93-d5c7-4e60-9d85-43da15fbdfa0" x="671" y="252" width="142" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="43fc9dde-256d-45a4-a81e-b38328c50823" x="813" y="252" width="177" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="aad5926d-0170-42aa-aeac-276f6cf40aef" x="671" y="287" width="142" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="09fd799a-0227-4ddf-a7a5-c20e652256b8" x="813" y="287" width="177" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="dbd06f38-1092-4b35-95b7-0820660e3180" x="529" y="287" width="142" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="88be4ed7-8103-4b85-95f9-f2b3fc0e57b5" x="671" y="322" width="142" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="963e30fd-a5a4-4786-9e77-fb2d0a476e75" x="813" y="322" width="177" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="91f4e21f-7f29-413a-98f4-cb5bab136077" x="529" y="322" width="142" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="73166f7c-63b6-427b-9354-067c499c13b8" x="671" y="357" width="142" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c161f6b6-74be-408a-b50d-8261204e41c7" x="813" y="357" width="177" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2516678c-16f1-40c5-aab8-8aa89c04c74f" x="529" y="357" width="142" height="35"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="5112fb49-530c-4364-904a-f1d0595ea463" x="8" y="252" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nombre completo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="29cfdf1e-b299-481d-be4d-9635736e8b70" x="7" y="289" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nombre completo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d6691551-c6d7-4dc6-ad51-c53570c6ea5d" x="8" y="323" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nombre completo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="690ec3eb-a9ca-4f31-ae3a-cd9d33a30665" x="8" y="357" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nombre completo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="52f14162-fdd5-4163-b589-8f041445b165" x="535" y="253" width="63" height="15"/>
+				<textElement/>
+				<text><![CDATA[Parentesco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6b3a0e62-1392-4018-a569-05488e323fc9" x="536" y="289" width="63" height="15"/>
+				<textElement/>
+				<text><![CDATA[Parentesco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b1cfdfd9-e047-4f1f-a235-1343d6a9dafc" x="536" y="323" width="63" height="15"/>
+				<textElement/>
+				<text><![CDATA[Parentesco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="93a2fb12-2186-49e1-855a-44e8e7317ff9" x="535" y="358" width="63" height="15"/>
+				<textElement/>
+				<text><![CDATA[Parentesco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="033f88b0-ba57-4bfb-a40c-f92428e0bb14" x="676" y="253" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nivel de estudios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c62b0156-e2e3-4e65-b95f-00afdd44d4f7" x="676" y="290" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nivel de estudios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dd540982-6297-4806-a3e7-cc29da03f8f9" x="676" y="323" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nivel de estudios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7bc1e1cb-40c2-4fda-b79c-a9c9f2253a32" x="675" y="358" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Nivel de estudios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c2532c4-396a-451f-b36b-66aec3c19c21" x="853" y="252" width="113" height="15"/>
+				<textElement/>
+				<text><![CDATA[Fecha de nacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71d957f6-9cb5-40de-895e-1b206401acd2" x="855" y="286" width="113" height="15"/>
+				<textElement/>
+				<text><![CDATA[Fecha de nacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e2244023-9802-434f-8329-5b873b4b4a31" x="855" y="324" width="113" height="15"/>
+				<textElement/>
+				<text><![CDATA[Fecha de nacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bd0a44c3-59d5-4590-90fb-e7f8bee293b7" x="855" y="357" width="113" height="15"/>
+				<textElement/>
+				<text><![CDATA[Fecha de nacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e0160810-b68a-44fe-a3a7-8d8cdd8e8b9b" x="8" y="939" width="470" height="96"/>
+				<textElement/>
+				<text><![CDATA[• Valor solicitado (campo a diligenciar por parte de la Cooperativa)
+• Datos personales sobre salud:
+Peso: _____Kg.,           Estatura: _______ mts.
+• Ha padecido accidentes que le impidan desempeñar labores propias de su ocupación?  __Si  __No. En caso afirmativo, detallar___________________________________________________
+• Tiene en la actualidad alguna pérdida funcional o anatómica?    __Si        __No.
+Cual? ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="41b9febb-487d-4504-86ff-a79a683a7d76" x="499" y="939" width="444" height="96"/>
+				<textElement/>
+				<text><![CDATA[• Marque una X en caso de que padezca o haya padecido alguna enfermedad relacionada con:
+__Corazón     __Presión arterial     __Riñones     __Enfermedades neurológicas
+__VIH           __Cáncer                __Diabetes    __Enfermedades hepáticas
+__Pulmones     __Otras
+Cuáles? _______________________________________________
+• Tiene usted conocimiento sobre intervenciones quirúrgicas a las que será sometido próximamente?    __Si     __No.
+Cuales?]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="0e0f2e0a-2d7f-4132-98c6-f052ee1e1a2f" x="0" y="1162" width="990" height="20" forecolor="#00CC00" backcolor="#008000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="2acb8142-f634-4cd5-b097-e729fe1e1ec8" x="32" y="1162" width="949" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORME SOBRE CUPO GLOBAL DE ENDEUDAMIENTO (Sólo para créditos)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a024154d-00be-467f-b0b0-382b919127a0" x="7" y="1184" width="974" height="28"/>
+				<textElement/>
+				<text><![CDATA[En consideración a la normatividad vigente sobre el control a los límites máximos de endeudamiento, declaro a CONFIAR que no conozco de créditos otorgados a terceros que deban acumularse para                     efectos de lo previsto en dicho decreto con el crédito recibido por mí.
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="e7ea25c6-4a80-45ee-bdf8-a870faea3c78" x="0" y="1212" width="990" height="20" forecolor="#00CC00" backcolor="#008000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b8de0485-4fcc-4e39-9c34-2a1490982e03" x="34" y="1212" width="949" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AUTORIZACIÓN DÉBITO, ABONO AUTOMÁTICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="787b664a-c37a-46bc-aded-1e3057a1e047" x="8" y="1238" width="979" height="43"/>
+				<textElement/>
+				<text><![CDATA[Autorizo a CONFIAR para que debite de mis cuentas el valor correspondiente a cuotas de amortización por concepto de capital, intereses y primas de seguros sobre obligaciones adquiridas con la Cooperativa, igualmente para debitar los gastos de estudios y administración del crédito, y las cuotas sociales que se deriven de mi vinculación como asociado y el pago de servicios recibidos de terceros.
+Autorizo a CONFIAR a realizar abonos relativos al desembolso de créditos a mis cuentas.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fdbdd25d-a7dd-4e1a-a132-7e04cdaddf45" x="18" y="1289" width="690" height="90"/>
+				<textElement/>
+				<text><![CDATA[Autorizo a CONFIAR Cooperativa Financiera para que en caso de que esta solicitud sea negada, esta entidad no me devuelva y destruya todos los documentos que he presentado. CONFIAR Cooperativa Financiera se hará responsable por la destrucción de los documentos.
+
+Firmo este documento en constancia de haber leído y declarado información verdadera en forma clara y precisa, aceptando las autorizaciones sugeridas en forma libre y voluntaria.
+Firma y Cédula      ______________________________________________________________
+Documento No.   ________________________________________________]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="13c2f253-ff38-4d01-a0f1-e973779ba672" x="738" y="1284" width="252" height="105"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="c95e64e5-79ab-4b5a-8f91-489d6f9f3f32" x="752" y="1288" width="158" height="15"/>
+				<textElement/>
+				<text><![CDATA[Huella Índice Derecho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0680360d-a30e-47eb-a115-e40ffeb20ab1" x="8" y="1055" width="936" height="101"/>
+				<textElement/>
+				<text><![CDATA[LA ASEGURADORA, se reserva los derechos de solicitar requisitos médicos adicionales si lo estima conveniente, así como de declinar o extraprimar cualquier solicitud que no esté de acuerdo con sus normas de selección.
+Declaro que la información suministrada es exacta, completa, y verídica, por lo tanto la falsedad, omisión, error o la reticencia en ellas, tendrán las consecuencias establecidas en las condiciones generales de la póliza y en las normas que regulan la materia.
+Autorizo a LA ASEGURADORA para tener acceso a mi historia clínica aún después de mi fallecimiento y a todos los datos que en ella se registren, así como a obtener mi historia clínica.
+Autorizo a LA ASEGURADORA para consultar las bases de datos de seguros de personas relativas a riesgos agravados en indemnizaciones, al cumplimiento de obligaciones crediticias y a las                    demás que permitan un conocimiento adecuado del asegurado. Así mismo la faculta para que informe a estas bases de datos los aspectos que la Compañía considere pertinentes en relación con el contrato de seguro celebrado o que vayan a celebrar.
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="0e6fb826-ac76-43dc-b842-ff4c4049f4bd" x="401" y="77" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{FEC_NAC_CONYUGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7437e004-9013-4446-8069-86dd2ee77fdd" x="399" y="38" width="199" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{NOMBRE_CONYUGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="04afcdca-41ee-487e-a7e5-63179e15057b" x="39" y="38" width="146" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{APELLIDO1_CONYUGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fdd0f2c9-dbd0-4818-b130-5a4f01323cb3" x="204" y="38" width="133" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{APELLIDO2_CONYUGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a32e2f83-6bdc-4796-ae06-5c73866280ea" x="792" y="36" width="186" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{DOC_CONYUGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0debf08f-0802-422f-b85b-ed92f96e86c9" x="534" y="74" width="85" height="15"/>
+				<textElement/>
+				<text><![CDATA[Primaria o menos]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="0cc476ce-b365-4ac3-a95c-6a6ab7e14146" x="520" y="77" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NIV_EST_CONYUGE}.equals("6")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="e34a8eb4-ed0f-41e4-ab0b-bc11a58d4b5e" x="643" y="74" width="46" height="15"/>
+				<textElement/>
+				<text><![CDATA[Bachiller]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="b3052dd7-1fbb-4b17-bc60-3d52910dddbc" x="629" y="77" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NIV_EST_CONYUGE}.equals("5")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="014e8bb9-56f1-48ef-b15b-21bcb17617c9" x="724" y="75" width="44" height="15"/>
+				<textElement/>
+				<text><![CDATA[Técnico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e5f1ca65-149d-4b45-bdae-b5941edd695f" x="534" y="97" width="66" height="15"/>
+				<textElement/>
+				<text><![CDATA[Tecnológico  ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="8a379a7d-077e-4ddb-80ac-8b4febbb32f3" x="520" y="98" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NIV_EST_CONYUGE}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="94611e82-9aed-4f05-916e-ad4eb2daac98" x="629" y="99" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NIV_EST_CONYUGE}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="0f341a93-544d-4edd-b95d-e760f1280ceb" x="709" y="77" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{NIV_EST_CONYUGE}.equals("3")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="372e7d6e-7c72-429d-b3bf-757ab4514562" x="53" y="76" width="54" height="15"/>
+				<textElement/>
+				<text><![CDATA[Asalariado]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="7ba48ec9-0f98-4212-98c4-f60a9d1f5177" x="39" y="77" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="c5bc9492-3fa3-4d01-abb2-37bacc3e2422" x="122" y="79" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("3")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="68f766a4-445a-42c5-ac7f-99570f9c2a0b" x="136" y="76" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Trabajador Asociado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dad72223-bf92-4bc8-b939-d33ac2f030e5" x="53" y="92" width="56" height="15"/>
+				<textElement/>
+				<text><![CDATA[Estudiante]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="dcffcd64-ae9a-42bc-b433-4c648f32dc6d" x="39" y="92" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("6")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="a99e8f40-c308-4f2d-9c84-9338a8004535" x="121" y="94" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("11")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="d0de643f-b639-48a1-95fd-4f6e1313a065" x="180" y="95" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("5")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="ee0790a5-2229-4091-b945-0975d33ab4c6" x="138" y="94" width="35" height="15"/>
+				<textElement/>
+				<text><![CDATA[Menor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ffd74763-31fc-47dd-b6fc-cad8fa69f82b" x="199" y="93" width="67" height="15"/>
+				<textElement/>
+				<text><![CDATA[Ama de casa]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="d75ef3ab-dd13-4e0b-a4cf-73d56cccd181" x="38" y="109" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("4")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="be0d39bf-7363-413e-9c0f-ad3330bfc7de" x="53" y="109" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Jubilado/Pensionado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="43aab13a-a099-459b-903c-64f8511b0023" x="198" y="109" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Empleado Informal]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="8189335e-85d1-48a8-a19c-dc93ba04dd9b" x="180" y="112" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("8")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="9a13e1d0-fceb-4085-b20c-d6dbcd01a9c6" x="38" y="123" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("9")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="b230e888-ae65-4c5e-99e0-34e5e17dad61" x="180" y="126" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("10")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="5d38e395-f9d2-4ae7-8d96-0cdfc440c502" x="199" y="125" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Rentista Capital]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd92251a-73d0-47ad-a5c7-adc9c57d718a" x="53" y="124" width="113" height="15"/>
+				<textElement/>
+				<text><![CDATA[Empleado Doméstico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="846d67bb-bc53-475f-91d3-67152fa1545a" x="52" y="140" width="125" height="15"/>
+				<textElement/>
+				<text><![CDATA[Independiente Profesional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="df2b8e08-fe3d-404c-b30c-ed23537fdb22" x="199" y="139" width="119" height="15"/>
+				<textElement/>
+				<text><![CDATA[Independiente  Informal]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="2794505f-a5bd-4b0c-a991-dfe138c576a5" x="38" y="139" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("2")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="2cbf48aa-1526-45de-8f79-349f806196dd" x="180" y="142" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("15")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="caa19e91-c017-4b63-abba-2e9975c6ccff" x="51" y="156" width="105" height="15"/>
+				<textElement/>
+				<text><![CDATA[Independiente Agro   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5dbe434d-2ffc-4962-a263-a7cf188232f9" x="191" y="156" width="135" height="20"/>
+				<textElement/>
+				<text><![CDATA[Independiente Formalizado   ic text]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="8e90b0d1-d72d-428a-a5f0-76b141e49d5b" x="37" y="155" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("13")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="3995218e-1867-424d-a090-7ba10f930024" x="179" y="157" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{ACT_LAB_CONYUGE}.equals("14")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="5b20124d-4859-4d0d-9cac-3bac65ef3e36" x="328" y="130" width="278" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{EMPRESA_CONYUGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7cd15c82-8afa-4827-b53c-d7723f081630" x="622" y="117" width="112" height="15"/>
+				<textElement/>
+				<text><![CDATA[cargo u ocupación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ff373ab7-ad77-4e31-96f6-c59245007076" x="789" y="117" width="153" height="15"/>
+				<textElement/>
+				<text><![CDATA[Teléfono del lugar de trabajo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61b10e50-9d71-48c8-b5dd-058115abb960" x="774" y="147" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Departamento]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="5b924df4-db64-477f-a502-ecf2954d36b9" x="623" y="131" width="130" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{CARGO_CONYUGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="3b9c0e93-db7a-403f-9b7f-2361298f5fa3" x="689" y="20" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Doc. de Identidad    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="01258159-7f71-4728-ac06-f9a5e5a585a1" x="350" y="254" width="86" height="15"/>
+				<textElement/>
+				<text><![CDATA[Doc. de Identidad    ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="8d0a11aa-528f-4290-a9d6-89656fd711d7" x="443" y="259" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{BENEFICIARIO_TIP_DOC1}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="066efbbf-3c1c-4286-9e6e-caeabb66da46" x="486" y="259" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{BENEFICIARIO_TIP_DOC1}.equals("4")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="dd8cab21-303e-452a-bbf8-866ca063d504" x="454" y="257" width="22" height="15"/>
+				<textElement/>
+				<text><![CDATA[ CC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="627785ff-c2dc-4fb3-9838-c9761b06f557" x="498" y="257" width="22" height="15"/>
+				<textElement/>
+				<text><![CDATA[TI]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="217c82ba-a558-4ea0-ab3d-4da8c7e2f2e8" x="9" y="270" width="232" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_NOMBRE1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b84346e9-a54b-46a2-acee-a61ed603587c" x="9" y="304" width="232" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_NOMBRE2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9d5220a0-f953-497e-a55b-3eec88fda2fd" x="9" y="339" width="232" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_NOMBRE3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9ba86ab9-643f-4a0d-acd3-6977786844e6" x="9" y="374" width="232" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_NOMBRE4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b77fbaa0-308a-4427-9707-be0721cf6e10" x="499" y="292" width="22" height="15"/>
+				<textElement/>
+				<text><![CDATA[TI]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="ff515542-e565-486d-894b-abffdd6411a0" x="444" y="294" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{BENEFICIARIO_TIP_DOC2}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="d94aed81-4925-47bb-9e87-9226d8d671ac" x="455" y="292" width="22" height="15"/>
+				<textElement/>
+				<text><![CDATA[ CC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5990c912-300c-490c-8df7-145d62b5f4fc" x="351" y="289" width="86" height="15"/>
+				<textElement/>
+				<text><![CDATA[Doc. de Identidad    ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="b9545cd7-30b3-4f14-8fa9-62efd90623ed" x="487" y="294" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{BENEFICIARIO_TIP_DOC2}.equals("4")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="0abab9c4-93cd-496c-bbf6-bd1cbea0ed3a" x="351" y="324" width="86" height="15"/>
+				<textElement/>
+				<text><![CDATA[Doc. de Identidad    ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="04e05ae3-8a62-464a-939d-e57fcd0125bb" x="444" y="329" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{BENEFICIARIO_TIP_DOC3}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="65d7c4d8-0284-48bc-b40e-e6588e524f9a" x="455" y="327" width="22" height="15"/>
+				<textElement/>
+				<text><![CDATA[ CC]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="8ef5e232-940b-4547-a83a-00910d9f2e48" x="487" y="329" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{BENEFICIARIO_TIP_DOC3}.equals("4")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="9bce268d-80ef-4c59-ab7d-513f3a5323dd" x="499" y="327" width="22" height="15"/>
+				<textElement/>
+				<text><![CDATA[TI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c722aa64-685b-45c4-8b8f-e1c17cb180af" x="351" y="358" width="86" height="15"/>
+				<textElement/>
+				<text><![CDATA[Doc. de Identidad    ]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="813ef64c-d9cf-423c-bb54-8ad00b9cb492" x="442" y="363" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{BENEFICIARIO_TIP_DOC4}.equals("1")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="53ee1766-8d99-4f34-a12d-6e804f82544e" x="453" y="361" width="22" height="15"/>
+				<textElement/>
+				<text><![CDATA[ CC]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="d8ae1cfd-df27-4607-8744-00fb7c067a02" x="485" y="363" width="10" height="10"/>
+				<imageExpression><![CDATA[($P{BENEFICIARIO_TIP_DOC4}.equals("4")?$P{IMG_SELECTED_TRUE}:$P{IMG_SELECTED_FALSE})]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="be6a42a2-7841-43f6-ba56-83de7093ed58" x="497" y="361" width="22" height="15"/>
+				<textElement/>
+				<text><![CDATA[TI]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="30b06d35-86f2-4f5b-b647-0ea9bd569149" x="351" y="271" width="134" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_DOC1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="49b25264-f026-4295-9913-86be94208ab8" x="351" y="306" width="134" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_DOC2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e9cade5a-64bb-40d8-b946-307bf831bbcd" x="352" y="339" width="133" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_DOC3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b6c2a62d-871a-45c9-8548-e3558d2052fb" x="352" y="375" width="135" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_DOC4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7e19b2e2-4712-4b47-b073-a6e5bdb43087" x="535" y="269" width="133" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_PAR1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c9a65ea5-0d8b-44cf-aa05-ebe191257bab" x="536" y="305" width="129" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_PAR2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b326962d-5a39-4e2a-b040-8b583845d729" x="536" y="338" width="128" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_PAR3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a617f21f-d598-47c3-a76d-deb4e38149f2" x="535" y="374" width="129" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_PAR4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4cc63e1f-93ac-4a3f-be2e-cde00474da6a" x="676" y="269" width="130" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_NIV_EDU1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="395ab522-7bd7-4c25-829a-1904c31d12dd" x="677" y="304" width="129" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_NIV_EDU2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4521e14c-90c5-4253-b24b-43c63100650c" x="677" y="338" width="129" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_NIV_EDU3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b9e0276e-c4e9-470d-8199-5923e9b37e7b" x="676" y="372" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_NIV_EDU4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="df9bfa7b-ec03-4619-8ea3-567f6cf48221" x="870" y="268" width="96" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_FEC_NAC1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="44da7d81-4d6b-4ede-be7a-0ffbc355adc0" x="869" y="301" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_FEC_NAC2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8b847617-057a-4582-b4fd-f5ce2493e56d" x="868" y="338" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_FEC_NAC3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="44b4ba57-a5d1-42b2-8668-c1b9f6a1db73" x="869" y="373" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{BENEFICIARIO_FEC_NAC4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5a14dc8e-6457-4092-aa93-da7e7d2e6038" x="799" y="131" width="130" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{TEL_TRAB_CONYUGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="573ad6cd-5adb-4bac-b780-e6977ffcf4ad" x="330" y="158" width="278" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{DIR_EMP_CONYUGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="81a8d30e-a121-4abd-b1c8-c9c0f5e04bb0" x="650" y="159" width="115" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{MUN_CONYUGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9040f314-06f3-47e1-b059-82a656fce4d6" x="785" y="160" width="184" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{DEP_CONYUGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="9da1f212-d69b-4553-bbe7-9467fa2435f3" x="10" y="219" width="864" height="15"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Para tener en cuenta:  Asociados casados o en unión libre: esposa(o) o compañera(o) permanente e hijos de 0 a 25 años. Asociados solteros:  los padres  o en su defecto hasta dos]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

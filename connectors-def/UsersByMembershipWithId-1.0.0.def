@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>UsersByMembershipWithId</id>
+  <version>1.0.0</version>
+  <category icon="scripting.png" id="Script"/>
+  <input mandatory="true" name="grupo" type="java.lang.String"/>
+  <input mandatory="true" name="rol" type="java.lang.String"/>
+  <output name="mapaUsuarios" type="java.util.Map"/>
+  <page id="DatosMembresia">
+    <widget xsi:type="definition:Text" id="Grupo" inputName="grupo"/>
+    <widget xsi:type="definition:Text" id="Rol" inputName="rol"/>
+  </page>
+</definition:ConnectorDefinition>
